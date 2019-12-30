@@ -25,7 +25,7 @@ _Note: The TA for the course acts as a grader.  If you have questions on the top
 **Class GitHub repo:** https://www.github.com/wonsunahn/CS1632_Spring2020
 
 **Required Texts:**
-* (_A Friendly Introduction to Software Testing_)[software-quality-assurance-textbook]
+* [_A Friendly Introduction to Software Testing_](software-quality-assurance-textbook.pdf)
   * This is a PDF and is freely available by clicking on the link
 
 This course provides students with a broad understanding of modern software testing and quality assurance. Although it will cover testing theory, the emphasis is on providing practical skills in software testing currently used in industry. To that end, it will cover: manual and automated tests, test-driven development, performance testing, and understanding and developing a testing strategy.
@@ -65,9 +65,9 @@ Score  | Grade
 
 All groups are expected to do their own work on the group projects, and students to do entirely their own work on the other projects.  Projects may be analyzed with the Stanford _moss_ system to detect unauthorized collaboration between groups or individuals.  Any student caught collaborating or cheating will, at a minimum, automatically receive a 0 (zero) for that exam or project, and may be penalized more harshly based on University of Pittsburgh academic policy.
 
-Assignments should be committed and pushed to GitHub to _a private repository_ and shared with the TA and me by the beginning of class on the due date.  Write-ups are due at the beginning of class and must be given to me in person.  Write-ups must be PRINTED OUT and handed in.
+Assignments should be committed and pushed to GitHub to _a private repository_ and shared with the TA and me by the due date.  All assignments also require write-ups that needs to be submitted via courseweb by the due date.  The format of the write-up will be specified on each assignment.  Students are encourged to commit early and often to the GitHub repository as commit history will be used as the ground truth for proof of work (especially as it relates to a group project).  Also, frequent commits help avoid conflicts when working on the same files as your partner.  
 
-Late assignments may be turned in one class late, but you will receive a -15 percentage point penalty (e.g., if you would have received a 90% on an assignment, but you turned it in late, you would receive 90 - 15 = 75%.)
+Late assignments will receive a -5 percentage point penalty per day (e.g., if you would have received a 90% on an assignment, but you turned it in 3 days late, you would receive 90 - 15 = 75%.)
 
 Please ensure that you have a student GitHub account so that you can make private repositories.  This is free and available here: https://education.github.com/
 
