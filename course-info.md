@@ -76,6 +76,12 @@ If any disputes from groups arise, I will assume that GitHub is the "ground trut
 
 It is recommended you keep all of your graded assignments until final grades are posted and accepted, in order to resolve any discrepancies in grading.
 
+## Group Work
+
+Please submit this [Partnership Contract](partnership_contract.txt) to
+courseweb as soon as possible.  Your expectations as a group member are
+outlined clearly on the contract.
+
 ## Attendance
 
 Regular attendance is expected for this course.  Attendance will be taken randomly throughout the semester.  The instructor will try to ensure that all information on the exams and projects will be available via slides, but simply reading the slides and textbook may be insufficient to understand the concepts thoroughly.  In addition, there will be in-class exercises without which you may find completing class projects extremely difficult.
