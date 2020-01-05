@@ -1,0 +1,25 @@
+[Partnership Contract]
+
+1. I shall do my fair share of work for all group work.  I understand that I
+may receive a different score from my partner upon adjudication, if a complaint
+is filed by my partner on that matter.  I understand that git repository commit
+history is an indication of my contribution to the group.
+
+2. I shall respond to my partner's emails within 24 hours, bar an emergency.
+
+3. I shall communicate with my partner on the division of work within 1 week of
+project release.
+
+4. I shall notify my partner on change of partnership as soon as possible and
+no later than 2 days after project release.  I shall also immediately submit my
+new contract to courseweb.
+
+Please write your name and your partner's name below:
+
+Partner 1: [YOUR NAME]
+Partner 2: [YOUR PARTNER'S NAME]
+
+Please copy this document and submit on courseweb under Course Documents where
+you will find Partnership Contract.  Please submit using the Text Submission
+functionality.  Submitting this document on courseweb will bind you to this
+contract, effective on the date of submission.
