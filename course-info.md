@@ -32,15 +32,16 @@ This course provides students with a broad understanding of modern software test
 
 ## Grading
 
-* Projects (80%):
+* Projects (75%):
   * Deliverable 1 - 10%
   * Deliverable 2 - 15%
   * Deliverable 3 - 15%
-  * Deliverable 4 - 15%
+  * Deliverable 4 - 10%
   * Deliverable 5 - 25%
 * Midterms (20%):
   * Midterm 1 - 10%
   * Midterm 2 - 10%
+* Participation (5%)
 
 Although you are not required to come to every class, it is recommended that you do.  You _are_ required to be present for exams.  Exams will NOT be allowed to be made up except with a valid and verified excuse (generally medical - others are left to the discretion of the instructor).
 
@@ -77,7 +78,7 @@ It is recommended you keep all of your graded assignments until final grades are
 
 ## Attendance
 
-Lecture attendance is not required, but is STRONGLY recommended. The instructor will try to ensure that all information on the exams and projects will be available via slides, but simply reading the slides and textbook may be insufficient to understand the concepts thoroughly.  In addition, there are several topics and tools which are not included in the textbook but are covered in class.
+Regular attendance is expected for this course.  Attendance will be taken randomly throughout the semester.  The instructor will try to ensure that all information on the exams and projects will be available via slides, but simply reading the slides and textbook may be insufficient to understand the concepts thoroughly.  In addition, there will be in-class exercises without which you may find completing class projects extremely difficult.
 
 ## Project Details
 
