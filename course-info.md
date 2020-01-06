@@ -9,7 +9,7 @@ Software Quality Assurance - Spring 2020
 **Instructor's Office Hours:**
 
   * SENSQ 5423
-  * Hours: Mon 2:30 PM - 4:30 PM, Fri 2:00 PM - 4:00 PM
+  * Hours: Tue 3:00 PM - 5:00 PM, Fri 2:00 PM - 4:00 PM
   * ... or by appointment.
 
 **Class Time:**
