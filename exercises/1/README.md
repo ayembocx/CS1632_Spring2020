@@ -79,6 +79,6 @@ Each pairwise group will submit the exercise *once* to courseweb, by *one member
 
 *Don't forget to write the names of all group members at the top of the document! This applies to all submissions.*
 
-When your exercise is marked as graded, you should find feedback written by Nick, our TA, on your grade details.  Nick will leave the same feedback for all group members.
+When your exercise is marked as graded, you should find feedback written on your grade details.  The TA will leave the same feedback for all group members.
 
 Note that the in-class exercise is not graded.  However, an extra credit of 1 point out of 100 points for the entire course will be awarded to the group that finds the most number of defects in the program.  There can be multiple winners too if there is a tie!
