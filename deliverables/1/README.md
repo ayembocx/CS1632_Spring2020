@@ -13,7 +13,7 @@ There should be at least as many test cases as requirements, although I would no
 
 Each requirement should have AT LEAST one test case associated with it, and each test case should have EXACTLY ONE requirement associated with it.  This can easily be checked via a traceability matrix (which you should also deliver).  In a real world scenario, one test case can test multiple requirements but, for the purposes of this assignment, please limit it to one requirement (the one that is tested primarily).
 
-Test cases should mention all necessary preconditions, input values, execution steps, output values, and postconditions.  Remember when they are necessary and when they are not.
+Test cases should mention all necessary preconditions, execution steps, and postconditions.
 
 It is NOT necessary to make multiple test plans inside a test suite; it is enough for there to be one test plan.
 
