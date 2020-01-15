@@ -42,8 +42,8 @@ ON A SEPARATE PAGE, a traceability matrix should be provided mapping the test ca
 Finally, ON A SEPARATE PAGE, list at least three defects found.  The defects should follow the defect reporting template:
 
 	 IDENTIFIER:
-	 DESCRIPTION:
 	 SUMMARY:
+	 DESCRIPTION:
 	 REPRODUCTION STEPS:
 	 EXPECTED BEHAVIOR:
 	 OBSERVED BEHAVIOR:

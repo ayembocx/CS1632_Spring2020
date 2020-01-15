@@ -27,8 +27,8 @@ Remember the correct format for defects -
 
 ```
 	 IDENTIFIER:
-	 DESCRIPTION:
 	 SUMMARY:
+	 DESCRIPTION:
 	 REPRODUCTION STEPS:
 	 EXPECTED BEHAVIOR:
 	 OBSERVED BEHAVIOR:
