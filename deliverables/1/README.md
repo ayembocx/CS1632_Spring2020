@@ -13,7 +13,7 @@ There should be at least as many test cases as requirements, although I would no
 
 Each requirement should have AT LEAST one test case associated with it, and each test case should have EXACTLY ONE requirement associated with it.  This can easily be checked via a traceability matrix (which you should also deliver).  In a real world scenario, one test case can test multiple requirements but, for the purposes of this assignment, please limit it to one requirement (the one that is tested primarily).
 
-Test cases should mention all necessary preconditions, input values, execution steps, output values, and postconditions.  Remember when they are necessary and when they are not.
+Test cases should mention all necessary preconditions, execution steps, and postconditions.
 
 It is NOT necessary to make multiple test plans inside a test suite; it is enough for there to be one test plan.
 
@@ -71,7 +71,7 @@ The requirements are listed in the file requirements.txt.
 ## Submission
 Each pairwise group will submit the deliverable *once* to courseweb, by *one member* of the group. Under the "Course Documents" menu on the lefthand side, you will see an assignment named "Deliverable 1". Please upload a PDF format of your report.
 
-Nik, our TA, will record the score for both of you on courseweb, along with feedback on where points have been deducted.  You and your partner will get the same score.  If you feel otherwise, let me know.
+Our TA will record the score for both of you on courseweb, along with feedback on where points have been deducted.  You and your partner will get the same score.  If you feel otherwise, let me know.
 
 Please feel free to email me at wahn@pitt.edu or come to office hours to discuss any problems you have. 
  
