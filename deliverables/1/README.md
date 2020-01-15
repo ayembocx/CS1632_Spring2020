@@ -71,7 +71,7 @@ The requirements are listed in the file requirements.txt.
 ## Submission
 Each pairwise group will submit the deliverable *once* to courseweb, by *one member* of the group. Under the "Course Documents" menu on the lefthand side, you will see an assignment named "Deliverable 1". Please upload a PDF format of your report.
 
-Nik, our TA, will record the score for both of you on courseweb, along with feedback on where points have been deducted.  You and your partner will get the same score.  If you feel otherwise, let me know.
+Our TA will record the score for both of you on courseweb, along with feedback on where points have been deducted.  You and your partner will get the same score.  If you feel otherwise, let me know.
 
 Please feel free to email me at wahn@pitt.edu or come to office hours to discuss any problems you have. 
  
