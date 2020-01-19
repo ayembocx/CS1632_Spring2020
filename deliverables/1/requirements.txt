@@ -6,7 +6,7 @@ FUN-UNKNOWN-COMMAND - If a player enters a command not specified by FUN-ITERATIO
 
 FUN-INPUT-CAPS - The system shall be case-insensitive in regards to input values; that is, it shall accept capital and lower-case letters and treat them as equivalent.
 
-FUN-MOVE - The system shall allow a player to move North only if a door exists going North, and South only if a door exists going South.
+FUN-MOVE - The system shall allow a player to move North only if a door exists going North, and South only if a door exists going South.  If a door does not exist, the move shall be disallowed with the message: "A door in that direction does not exist."
 
 FUN-WIN - The player shall win the game if and only if Coffee, Sugar, and Cream have been collected by the player and then drunk.
 
