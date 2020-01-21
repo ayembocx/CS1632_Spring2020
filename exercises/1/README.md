@@ -75,10 +75,12 @@ The requirements are listed in the file requirements.md in this directory.
 
 ## Submission
 
-Each pairwise group will submit the exercise *once* to courseweb, by *one member* of the group.  Under the "Course Documents" menu on the lefthand side, you will see an assignment named "Exercise 1".  You can either submit a text version or upload a PDF format.  The document should contain the 6 test cases, traceability matrix, and 2 (or more) defects in separate sections.
+Please use the provided ReportTemplate.docx file provided in this directory to write your report.  If you don't have a .docx compatible word processor, that's perfectly fine as long as you follow the same organization.  A PDF version of the file is at ReportTemplate.pdf.  Please make sure that the traceability matrix, test cases, and defects are on seperate pages.  You will be submitting in PDF format.
 
-*Don't forget to write the names of all group members at the top of the document! This applies to all submissions.*
+Each pairwise group will submit the exercise *once* to GradeScope, by *one member* of the group.  The submitting member will press the "View or edit group" link at the top-right corner of the assignment page after submission to add his/her partner.  That way, the feedback will be accessible to both of you.
 
-When your exercise is marked as graded, you should find feedback written on your grade details.  The TA will leave the same feedback for all group members.
+*Don't forget to write the names of all group members at the cover page! This applies to all submissions.*
 
-Note that the in-class exercise is not graded.  However, an extra credit of 1 point out of 100 points for the entire course will be awarded to the group that finds the most number of defects in the program.  There can be multiple winners too if there is a tie!
+When your exercise is marked as graded, you should find feedback written on your grade details.
+
+Note that the in-class exercise is not used for final grade calculation.  However, an extra credit of 1 point out of 100 points for the entire course will be awarded to the group that finds the most number of defects in the program.  There can be multiple winners too if there is a tie!
