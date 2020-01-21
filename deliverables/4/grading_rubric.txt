@@ -1,0 +1,54 @@
+Report content (30%):
+
+Summary and testing concerns:                             _____ / 10
+  * How you determined the methods to refactor (-5 if not)
+  * Why you changed what you did (-5 if not)
+
+Screenshots of VisualVM (or other profiler):              _____ / 10
+  * Screenshot before refactoring (-5 if none)
+  * Screenshot after refactoring (-5 if none)
+
+Summary of pinning tests:                                 _____ / 10
+  * If JUnit testing a method, describe how you did it (-5 if none)
+  * If manual testing a method, the reason why you had to use manual (-5 if none)
+  * If manual testing a method, you also need to have your test cases here
+
+Method choice and refactoring (40%):
+
+You need to find THREE methods that are intentionally implemented in
+a way to be grossly slow, that take up most of the CPU time.
+
+Found first method:                                       _____ / 10
+
+Found second method:                                      _____ / 10
+
+Found third method:                                       _____ / 10
+
+Refactoring done properly:                                _____ / 10
+  * Refactored code must not impact functionality (-5 if not)
+  * Refactored code should improve performance (-5 if not)
+
+Pinning Tests (30%):
+
+* If manual testing a method, test cases must be well-formed with
+PRECONDITIONS, EXECUTIONS STEPS, and POSTCONDITIONS (-5 if not)
+* Test cases must be named descriptively and cover a variety of edge
+and happy cases. (-5 if not)
+
+Pinning tests for first method:                           _____ / 10
+  * 4 points for first test, 3 points for the remaining two.
+
+Pinning tests for second method:                          _____ / 10
+  * 4 points for first test, 3 points for the remaining two.
+
+Pinning tests for third method:                           _____ / 10
+  * 4 points for first test, 3 points for the remaining two.
+
+-----
+
+Submission issues (-10) or other adjustments:             _____
+
+Total:                                                    _____ / 100
+
+
+
