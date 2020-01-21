@@ -29,7 +29,9 @@ The report should start with a cover page with:
 
 There should be a short introduction (a few paragraphs) in which you may note any concerns or difficulties you may have had or anticipate with the testing process.  You should also note why you considered certain test cases, how you came up with edge cases, etc.
 
-This should be followed ON A NEW PAGE by the list of test cases.  You may name or number them any way you wish, but be consistent.  You may wish to write them out in this format -
+ON A NEW PAGE, a traceability matrix should be provided mapping the test cases with their associated requirements.  Remember that all requirements should map to AT LEAST ONE test case, and all test cases should map to EXACTLY ONE requirement.  
+
+ON A NEW PAGE, a list of the actual test cases should follow.  You may name or number them any way you wish, but be consistent.  You may wish to write them out in this format -
 
 	IDENTIFIER:
 	TEST CASE: 
@@ -37,9 +39,7 @@ This should be followed ON A NEW PAGE by the list of test cases.  You may name o
 	EXECUTION STEPS:
 	POSTCONDITIONS:
 
-ON A SEPARATE PAGE, a traceability matrix should be provided mapping the test cases with their associated requirements.  Remember that all requirements should map to AT LEAST ONE test case, and all test cases should map to EXACTLY ONE requirement.  
-
-Finally, ON A SEPARATE PAGE, list at least three defects found.  The defects should follow the defect reporting template:
+ON A NEW PAGE, list at least three defects found.  The defects should follow the defect reporting template:
 
 	 IDENTIFIER:
 	 SUMMARY:
@@ -48,7 +48,7 @@ Finally, ON A SEPARATE PAGE, list at least three defects found.  The defects sho
 	 EXPECTED BEHAVIOR:
 	 OBSERVED BEHAVIOR:
 
-Other attributes of a defect (e.g., SEVERITY or IMPACT) are not necessary.  The test case which found the defect should be listed as part of the SUMMARY.
+Other attributes of a defect (e.g., SEVERITY or IMPACT) are not necessary.  The test case which found the defect should be listed as part of the DESCRIPTION.
 
 ## Grading
 * Introduction: 10% of grade
@@ -69,9 +69,10 @@ java -jar coffeemaker.jar
 The requirements are listed in the file requirements.txt.
 
 ## Submission
-Each pairwise group will submit the deliverable *once* to courseweb, by *one member* of the group. Under the "Course Documents" menu on the lefthand side, you will see an assignment named "Deliverable 1". Please upload a PDF format of your report.
 
-Our TA will record the score for both of you on courseweb, along with feedback on where points have been deducted.  You and your partner will get the same score.  If you feel otherwise, let me know.
+Please use the ReportTemplate.docx file provided in this directory to write your report.  If you don't have a .docx compatible word processor, that's perfectly fine as long as you follow the same organization.  A PDF version of the file is at ReportTemplate.pdf.  Please make sure that the intro, traceability matrix, test cases, and defects are on seperate pages.  You will be submitting to GradeScope in PDF format.  When you submit, you will be asked to assign pages in the PDF file to each rubric item: 1. Introduction, 2. Traceability Matrix, 3. Test Cases, and 4. Defects.
+
+Each pairwise group will submit the exercise *once* to GradeScope, by *one member* of the group.  The submitting member will press the "View or edit group" link at the top-right corner of the assignment page after submission to add his/her partner.  Make sure that your partner is there, or he/she will not get a grade.
 
 Please feel free to email me at wahn@pitt.edu or come to office hours to discuss any problems you have. 
  
