@@ -75,12 +75,10 @@ The requirements are listed in the file requirements.md in this directory.
 
 ## Submission
 
-Please use the provided ReportTemplate.docx file provided in this directory to write your report.  If you don't have a .docx compatible word processor, that's perfectly fine as long as you follow the same organization.  A PDF version of the file is at ReportTemplate.pdf.  Please make sure that the traceability matrix, test cases, and defects are on seperate pages.  You will be submitting in PDF format.
+Note that the in-class exercise is not used for final grade calculation.  However, an extra credit of 1 point out of 100 points for the entire course will be awarded to the group that finds the most number of defects in the program.  There can be multiple winners too if there is a tie!
+
+Please use the provided ReportTemplate.docx file provided in this directory to write your report.  If you don't have a .docx compatible word processor, that's perfectly fine as long as you follow the same organization.  A PDF version of the file is at ReportTemplate.pdf.  Please make sure that the traceability matrix, test cases, and defects are on seperate pages.  You will be submitting to GradeScope in PDF format.  When you submit, you will be asked to assign pages in the PDF file to each rubric item: 1. Traceability Matrix, 2. Test Cases, 3. Defects, and 4. Extra credit: Defects found.  You will assign the same pages for 3. and 4. (obviously).
 
 Each pairwise group will submit the exercise *once* to GradeScope, by *one member* of the group.  The submitting member will press the "View or edit group" link at the top-right corner of the assignment page after submission to add his/her partner.  That way, the feedback will be accessible to both of you.
 
-*Don't forget to write the names of all group members at the cover page! This applies to all submissions.*
-
-When your exercise is marked as graded, you should find feedback written on your grade details.
-
-Note that the in-class exercise is not used for final grade calculation.  However, an extra credit of 1 point out of 100 points for the entire course will be awarded to the group that finds the most number of defects in the program.  There can be multiple winners too if there is a tie!
+When your exercise is marked as graded, you should find feedback written on your grade details.  Please use the feedback wisely when doing Deliverable 1!
