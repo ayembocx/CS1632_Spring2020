@@ -51,6 +51,8 @@ _Assume you are on a game show with three closed doors.  Behind one door is a ca
 
 _The question: is the optimal strategy to switch doors to the remaining closed door, to stay with the door you've already selected, or does it not matter?_
 
+The answer is: it is always better to switch doors (twice better)!  To see why, you can read the above wikipedia entry if you like reading, or here is a video if you are a more visual learner: https://www.youtube.com/watch?v=9vRUxbzJZ9Y.
+
 Our program will attempt to find the solution the worst possible way - by brute force.  It will simulate a large number of these decisions and give a summary at the end of what percentage of the time switching would give you the "good item" and what percentage of the time staying would have won you the "bad" item.
 
 The program will accept four arguments, in this order:
