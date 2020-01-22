@@ -3,7 +3,7 @@ Spring Semester 2020 - Exercise 1
 
 For this exercise, you and your partner will determine a test plan for the simple simulator GoatGoatCar, based on the requirements listed.  There are several known defects in the software; you will need to find and report on at least two.  Additionally, a traceability matrix showing the mapping of test cases to requirements is required.  
 
-There should be six (no more, no less) test cases altogether.
+There should be at least six test cases altogether.
 
 Test cases should mention all necessary preconditions, execution steps, and postconditions.
 
