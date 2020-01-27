@@ -16,8 +16,8 @@ AFIST = [_A Friendly Introduction to Software Testing_](software-quality-assuran
 * (Class 1) Requirements
   * READING: AFIST, Chapters 5
 
-* (Class 2) Test Plans, TM and Defects
-  * READING: AFIST, Chapters 6, 8-9
+* (Class 2) Test Plans, TM
+  * READING: AFIST, Chapters 6, 8
 
 ## WEEK 3 (Week of 20 JAN)
   
@@ -27,8 +27,8 @@ AFIST = [_A Friendly Introduction to Software Testing_](software-quality-assuran
 
 ## WEEK 4 (Week of 27 JAN)
 
-* (Class 1) Breaking Software, Smoke / Exploratory / Path-based Testing
-  * READING: AFIST, Chapters 7, 10-11
+* (Class 1) Defects and Breaking Software
+  * READING: AFIST, Chapters 9, 7
   
 * (Class 2) Automated and Manual Testing, Unit Testing Part 1
   * READING: AFIST, Chapter 12-13
@@ -46,8 +46,8 @@ AFIST = [_A Friendly Introduction to Software Testing_](software-quality-assuran
 * (Class 1) Test-driven Development
   * READING: AFIST, Chapter 15
 
-* (Class 2) Writing Testable Code
-  * READING: AFIST, Chapter 16
+* (Class 2) Writing Testable Code, Smoke / Exploratory / Path-based Testing
+  * READING: AFIST, Chapter 16, 10-11
 
 ## WEEK 7 (Week of 17 FEB)
 
