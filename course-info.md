@@ -13,12 +13,19 @@ Software Quality Assurance - Spring 2020
   * ... or by appointment.
 
 **Class Time:**
-  * Mon/Wed 11:00 PM - 12:15 PM (1501 Wesley W. Posvar Hall)
-  * Mon/Wed 1:00 PM - 2:15 PM (5129 Sennott Square)
-  * Tue/Thu 5:30 PM - 6:45 PM (A224 Langley Hall) 
+  * Section 1120: Mon/Wed 11:00 PM - 12:15 PM (1501 Wesley W. Posvar Hall)
+  * Section 1100: Mon/Wed 1:00 PM - 2:15 PM (5129 Sennott Square)
+  * Section 1130: Tue/Thu 5:30 PM - 6:45 PM (A224 Langley Hall) 
 
-**TA**:
-  * TBA
+**TA (Sections 1100)**:
+  * Ying Zhang (yiz165 at pitt dot edu)
+  * SENSQ 6148
+  * Hours: Wed 9:30 AM - 11:00 AM, Thu 3:30 PM - 5:00 PM
+  
+**TA (Sections 1120, 1130)**:
+  * Tejasvi Medi (tem73 at pitt dot edu)
+  * SENSQ 6803
+  * Hours: Wed 12:00 - 1:30 PM, Thu 12:00 - 1:30 PM
   
 _Note: The TA for the course acts as a grader.  If you have questions on the topics themselves, please email the instructor._
 
