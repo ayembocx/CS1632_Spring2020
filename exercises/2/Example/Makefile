@@ -7,7 +7,7 @@
 SRC_DIR=./
 
 # This is the path to your JUnit jars and such.
-JUNIT_DIR=./
+JUNIT_DIR=../CommandLineJunit/
 
 # This is the path to your test directory.
 # Example: java/test

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="CommandLineJunit/|Example/" kind="src" path=""/>
+	<classpathentry kind="src" path="CommandLineJunit"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="CommandLineJunit/mockito-core-1.10.19.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
