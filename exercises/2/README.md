@@ -59,7 +59,7 @@ You will modify two classes: RentACatImpl and RentACatTest.  The RentACatImpl cl
 
 We are going to use the TestRunner class to invoke JUnit on the RentACatTest class.  Note that RentACatTest.class is added to the list of classesToTest.
 
-You should use test doubles/mocks for any references to classes other than the one under test that the tested class is dependent upon (i.e., double or mock any Cat objects).  You do not need to double the ArrayList class used within RentACatImpl even though RentACatImpl is dependent upon it.  ArrayList is a Java standard library class so we will assume that it has fully tested and defect-free at this point. :)
+You should use test doubles/mocks for any references to classes other than the one under test that the tested class is dependent upon (i.e., double or mock any Cat objects).  You do not need to double the ArrayList class used within RentACatImpl even though RentACatImpl is dependent upon it.  ArrayList is a Java standard library class so we will assume that it is fully tested and defect-free at this point. :)
 
 You do not need to test any of the methods in the Cat class since that is an external class that is beyond the unit we are trying to test.
 
