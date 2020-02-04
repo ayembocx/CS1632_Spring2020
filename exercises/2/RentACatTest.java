@@ -79,7 +79,6 @@ public class RentACatTest {
 	@Test
 	public void testGetCatNullNumCats0() {
 		// TODO
-		assertFalse("True is not false", true);
 	}
 
 	/**
