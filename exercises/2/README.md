@@ -209,3 +209,13 @@ You will do two submissions for this exercise.
 Please submit by Sunday (2/9) 11:59 PM to get timely feedback.
 
 IMPORTANT: Please keep the github private!
+
+## GradeScope Feedback
+
+The GradeScope autograder works in 3 phases:
+1. RentACatTestSolution.(some method) on RentACatImpl: RentACatTestSolution is the solution implementation of RentACatTest.  The purpose of this phase is to test RentACatImpl for defects.
+1. RentACatTest.(some method) on RentACatImpl: RentACatTest is the your submitted implementation of RentACatTest.  The purpose of this phase is to test RentACatTest itself for defects.  Assuming RentACatImpl is defect free (as tested in phase 1.), then all tests in RentACatTest should pass.
+1. RentACatTest.(some method) on RentACatBuggy: RentACatTest is the your submitted implementation of RentACatTest and you are testing against the buggy RentACatBuggy implementation.  The purpose of this phase is to further test RentACatTest for defects more rigorously.  It does this by testing whether RentACatTest finds all the bugs that RentACatTestSolution is able to find within RentACatBuggy.
+If you see test failures, read the feedback given by the autograder, fix your code, and retry.
+
+Beside the feedback given by the autograder, the TA or myself will leave more detailed feedback on the "Feedback on source code" question.  We will also check your code coverage screenshot submission and give feedback.
