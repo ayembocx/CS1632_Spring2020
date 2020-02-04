@@ -13,7 +13,7 @@ Rent-A-Cat rents cats to customers for various needs (mousing, companionship, ho
 3. Return a cat
 4. Quit
 
-A cat which is out for rental cannot be rented and will not be listed until it has been returned.  As part of this exercise, we will not charge money.
+A cat which is out for rental cannot be rented and will not be listed until it has been returned.  We will not charge money for this exercise.
 
 ## Sample Output
 
@@ -55,12 +55,11 @@ Option [1,2,3,4] > 4
 Closing up shop for the day!
 ```
 
+You will modify two classes: RentACatImpl and RentACatTest.  The RentACatImpl class is an (incomplete) implementation of the Rent-A-Cat system.  The RentACatTest class is a JUnit unit test class that tests RentACatImpl.  All locations where you should add code is marked with the // TODO comment.
 
-You should also write appropriate unit tests for each public method.  There should be at least one unit test per method, and a total of at least SIX unit tests.  You may group these however you like - (e.g., one unit test for three methods, and three for the last one; two unit tests for two methods, one unit test each for the other two; etc.)
+We are going to use the TestRunner class to invoke JUnit on the RentACatTest class.  Note that RentACatTest.class is added to the list of classesToTest.
 
-Note that while I have provided a TestRunner, I only provided a skeleton Test file with the name RentACatTest!  You will need to fill in the Test file with test cases as well as modify the TestRunner to include the correct classes.  You can view the LinkedList sample code we discussed in class or code under the CommandLineJunit subdirectory for an example of how to do this.
-
-You should use test doubles/mocks for any references to classes other than the one under test (i.e., double or mock any Cat objects).  You may use an ArrayList of doubled objects (that is, you do not need to double ArrayList itself).
+You should use test doubles/mocks for any references to classes other than the one under test that the tested class is dependent upon (i.e., double or mock any Cat objects).  You do not need to double the ArrayList class used within RentACatImpl even though RentACatImpl is dependent upon it.  ArrayList is a Java standard library class so we will assume that it is fully tested and defect-free at this point. :)
 
 You do not need to test any of the methods in the Cat class since that is an external class that is beyond the unit we are trying to test.
 
@@ -74,83 +73,139 @@ If you do this in an IDE such as Eclipse, or with a build tool like Gradle, this
     ```
     For Mac or Linux, try doing:
     ```
-    make
-    ```
-    Or if that doesn't work (because make is not installed), try doing:
-    ```
     bash run.sh
     ```
-    If successful, you will get a message "ALL TESTS PASSSED".  But hold your horses, we aren't done yet!
-    
-2. We haven't yet added our RentACatTest test class to the list of classes tested by JUnit.  There is a simple boilerplate test runner I created for you (TestRunner.java).  It iterates over a list of test classes and invokesJUnitCore.runClasses on each of them.  Our RentACatTest is not on that list.  You need to modify it so that it is.  Read the test runner for NoogieTest and CoogieTest under CommandLineJunit/ to see how.
-
-    If successful, you should get the following message:
+    For those of you who prefer Makefiles, you can also do:
     ```
-    initializationError(RentACatTest): No runnable methods
+    make
+    ```
+    If successful, you will get a message "ALL TESTS PASSSED".  But hold your horses, we aren't done yet!  The tests passed because they are currently empty.
+    
+2. Now you are ready to fill in the test cases in RentACatTest.  If you want to do a sanity test, try a very simple assertion that always succeeds in testGetCatNullNumCats0:
+    ```
+    assertTrue(true);
+    ```
+    Now you see the message "ALL TESTS PASSED" again.  Yes!  Now let's try an assertion that fails.  Change the above to:
+    ```
+    assertFalse(true);
+    ```
+    Now you should see a test failure like the below:
+    ```
+    testGetCatNullNumCats0(RentACatTest): null
 
     !!! - At least one failure, see above.
     ```
-    This is telling you that there are no test cases inside RentACatTest, which takes us to the next step.
+    What does that null mean?  It just means you didn't supply a failure message.  Try the following:
+    ```
+    assertFalse("True is not false", true);
+    ```
+    Then you should get:
+    ```
+    testGetCatNullNumCats0(RentACatTest): True is not false
 
-3. Now you are ready to add test cases to RentACatTest.  Add a very simple test case that always succeeds:
+    !!! - At least one failure, see above.
     ```
-    @Test
-    public void testShouldPass() {
-        assertNull(null);
-    }
-    ```
-    Now you see the message "ALL TESTS PASSED" again.  Yes!
     
-4. Now you are ready to start writing the RentACatTest class for real.  Start by adding very simple tests to gain confidence.  Next, try adding more complex cases that require Cat objects.  For that, you will have to modify setUp() to create some Cat test doubles with proper stubs.  We learned how to do that in class.  If you are still unsure, look at the LinkedListTest sample code or the NoogieTest and CoogieTest under the CommandLineJunit/ directory.
+3. Now you are ready to start writing the RentACatTest class for real.  Start by adding very simple tests to gain confidence.  Next, try adding more complex cases that require Cat objects.  For that, you will have to modify setUp() to create some Cat test doubles with proper stubs.  We learned how to do that in class.  If you are still unsure, look at the LinkedListTest sample code or the NoogieTest and CoogieTest under the Example/ directory.
 
 ## Tips
 
 1. Check to see if junit works on your machine before starting to code.
-1. We will try to apply the Test Driven Development (TDD) model here.  Try writing the test case(s) FIRST before writing the code for a feature.  This way, you will always have 100% test coverage for the code you have written.  Hence, if you break any part of it in the course of adding a feature or refactoring your code, you will know immediately.  Also, you will be forced to write code in a testable way.  Otherwise, if you test at the very end, you may have to do some major code refactoring to get to a reasonably testable system.
-1. Remember to _not_ double the class under test (i.e. RentACat), only classes that it depends upon (i.e. Cat).  In fact, if you don't double Cat and use the actual Cat objects, your tests will most likely fail.  I have injected artificial defects into the Cat class to emulate an external class that hasn't been completely written yet.
+1. We will try to apply the Test Driven Development (TDD) model here.  Try writing the test case(s) FIRST before writing the code for a feature.  This way, you will always have 100% test coverage for the code you have written and are writing.  Hence, if you break any part of it in the course of adding a feature or refactoring your code, you will know immediately.  Otherwise, if you test at the very end, you may have to do some major changes.
+1. Remember to _not_ double the class under test (i.e. RentACat), only classes that it depends upon (i.e. Cat).  In fact, if you don't double Cat and use the actual Cat objects, your tests will most likely fail.  I have injected artificial defects into the Cat class to emulate a buggy external class.
 1. The easiest thing to do is assert against a return value, but you can also assert against attributes of an object.  For example:
     ```
     @Test
-    public void testChangeCatName() {
-       Cat c = new Cat("Bustopher Jones", 150.00);
-       String newName = "Growltiger";
-       c.setName(newName);
-       assertEquals(c.getName(), newName);
+    public void testCatName() {
+       assertEquals("Expected name", _cat.getName());
     }
     ```
     You can also use the Mockito verify method to perform behavior verification.
-1. Try making use of the @Before and @After methods in your JUnit testing.  @Before and @After methods are invoked before and after each @Test method.  They are used to set up some program state required by preconditions and to tear down the setup.  In JUnit terminology, the set of objects with fixed state involved in the preconditions is called a Test Fixture.  The test fixture will work as a baseline for all tests in the test class and allow you to avoid repeating code.  Here you will create and initialize all objects you will be commonly using in your test cases, including all mock objects.
+1. Make use of the @Before and @After methods in your JUnit testing.  @Before and @After methods are invoked before and after each @Test method.  They are used to set up and tear down test fixtures.  Test fixtures in JUnit are objects that need to be created and initialized before performing each test case.  You can think of them as "actors" in your test script.  Having the @Before and @After allows us to avoid duplicating test fixture code in each test case.
 
 * Try to ensure that you check not only for "happy path" cases but also edge cases.
 * Tests are usually grouped into whichever classes they are testing, and have a filename that has `Test` appended to the name.  For example, Foo.java would be tested by FooTest.java.
 * Testing println's or other output is difficult - try to have methods return Strings which are easier to test.  It is possible to test for I/O but it requires some extra steps - see Chapter 14, Section 6 of the textbook for instructions.
   
+## Expected Outcome
+
+Once you start filling in tests in RentACatTest, you will start to see some of those tests fail for those methods you haven't completed yet for RentACatImpl.  As you start filling in the methods in RentACatImpl, those failures will go away one by one until you again see the output:
+```
+ALL TESTS PASSED
+```
+You have come full circle!  But wait, does this mean RentACat is bug-free?  How do you know if your unit tests themselves had defects and that's why they passed, even when RentACat is buggy?We have to actually verify the unit tests themselves to make sure that they are not defective!  One way to verify unit tests is to test them on buggy programs to see if they detect the bugs as they are intended to.  I have created a buggy version of Rent-A-Cat just for this purpose named RentACatBuggy.java.  In order to apply your unit tests to RentACatBuggy, execute the following.  For Windows:
+```
+runBuggy.bat
+```
+For Mac or Linux, try doing:
+```
+bash runBuggy.sh
+```
+This is the type of output you should expect to get:
+```
+TESTING BUGGY IMPLEMENTATION
+    
+testCatAvailableFalseNumCats0(RentACatTest): null
+testCatAvailableFalseNumCats3(RentACatTest): null
+testCatAvailableTrueNumCats3(RentACatTest): null
+testCatExistsFalseNumCats0(RentACatTest): null
+testCatExistsTrueNumCats3(RentACatTest): null
+testListCatsNumCats0(RentACatTest): expected:<[empty]> but was:<[]>
+testListCatsNumCats3(RentACatTest): expected:<ID 1. Jennyanydots[       ID 2. Old Deuteronomy   ID 3. Mistoffelees              ]> but was:<ID 1. Jennyanydots[
+ID 2. Old Deuteronomy
+ID 3. Mistoffelees
+]>
+testRentCatFailureNumCats0(RentACatTest): null
+testRentCatNumCats3(RentACatTest):
+Wanted but not invoked:
+cat.rentCat();
+-> at RentACatTest.testRentCatNumCats3(RentACatTest.java:255)
+
+However, there were other interactions with this mock:
+cat.getId();
+-> at RentACatBuggy.getCat(RentACatBuggy.java:143)
+
+cat.getRented();
+-> at RentACatBuggy.rentCat(RentACatBuggy.java:41)
+
+
+testReturnCatFailureNumCats0(RentACatTest): null
+testReturnCatNumCats3(RentACatTest):
+Wanted but not invoked:
+cat.returnCat();
+-> at RentACatTest.testReturnCatNumCats3(RentACatTest.java:292)
+
+However, there were other interactions with this mock:
+cat.getId();
+-> at RentACatBuggy.getCat(RentACatBuggy.java:143)
+
+cat.getRented();
+-> at RentACatBuggy.returnCat(RentACatBuggy.java:21)
+
+
+
+!!! - At least one failure, see above.
+```
+You can see that all tests fail except the ones for getCat(int id).  That is because I've inserted bugs into RentACatBuggy except for that method.  If your unit test passes any other method, it must be defective.  Time to fix your test.
+
 ## Submission
 
-Please do a Text Submission to Courseweb with a link to the GitHub repository where you stored it before the beginning of the next class, along with names of all group members.
+Each pairwise group will submit the exercise *once* to GradeScope, by *one member* of the group.  The submitting member will press the "View or edit group" link at the top-right corner of the assignment page after submission to add his/her partner.  That way, the feedback will be accessible to both of you.  I recommend that you divide the list of methods to implement / test into two halves and working on one half each.
 
-Example:
+You will do two submissions for this exercise.
 
-John Doe  
-Jane Doe  
-https://github.com/wonsunahn/CS1632_Fall2019/tree/master/exercises/2
+1. You will create a github repository just for exercise 2.  Add your partner as a collaborator so both of you have access.  Make sure you keep the repository *PRIVATE* so that nobody else can access your repository.  This applies to all future submissions for this course.  Once you are done modifying code, don't forget to commit and push your changes to the github repository.  When you are done, submit your github repository to GradeScope at the "Exercise 2 GitHub" link.  Once you submit, GradeScope will run the autograder to grade you and give feedback.  If you get deductions, fix your code based on the feedback and resubmit.  Repeat until you don't get deductions.
 
-In the repository, beside your code, please add the following two items.
+1. Create a screenshot of code coverage stats given by your IDE of choice and name it code_coverage.png. Example:
 
-1. Add a screenshot of the command line output from unit testing and name it unit_test.png.  Example:
+    https://github.com/wonsunahn/CS1632_Spring2020/blob/master/exercises/2/code_coverage.png
 
-    https://github.com/wonsunahn/CS1632_Fall2019/blob/master/exercises/2/unit_test.png
-
-    Don't mind the WARNINGs in the screenshot.  It is just telling you the Mockito library is trying to use some features of reflection that is disallowed in more recent versions of the JRE.  The important part is that "ALL TESTS PASSED".  You want to get that for this exercise and also your delivarable.
-
-1. Add a screenshot of code coverage stats given by your IDE of choice and name it code_coverage.png. Example:
-
-    https://github.com/wonsunahn/CS1632_Fall2019/blob/master/exercises/2/code_coverage.png
-
-    I used Eclipse to generate the screenshot.  Here is the user guide: https://www.eclemma.org/userdoc/launching.html.  It is just a click of a button and requires no extra installation.  My screenshot shows 100% code coverage for the public methods we tested.  You don't have to have 100% coverage for this exercise but you will have coverage requirements for your deliverable.  For those of you who are new to eclipse, you need to include the four JAR files under CommandLineJUnit/ as external JARs for it to compile.  You need to go to project properties > Java Build Path > Libraries and Add JARs or Add External JARs.  Also, don't create module-info.java when prompted.
+    I used Eclipse to generate the screenshot.  Here is the user guide: https://www.eclemma.org/userdoc/launching.html.  It is just a click of a button and requires no extra installation.  You don't have to have 100% coverage for this exercise but you will have coverage requirements for your deliverable.  I have already created an Eclipse project for you in the exercise directory so you can just open that to run TestRunner using File > Open Projects from File System from the menu.  If you can't open the project for some reason, you need to create a new project using File > New > Java Project.  For those of you who are new to eclipse, you need to include the four JAR files under CommandLineJUnit/ as external JARs for it to compile.  You need to go to project properties > Java Build Path > Libraries and Add JARs or Add External JARs.  Also, don't create module-info.java when prompted.
     
-    When you run the code coverage tool, you need to run TestRunner.java (modified to run your JUnit test class), not RentACat.java.  You can do that by clicking on and highlighting TestRunner.java before clicking on the code coverage button.  Alternatively, you can right click on TestRunner.java and click on the "Coverage as" item in the menu that pops up.  This is important.  If you run RentACat.java, you will be getting the code coverage while playing the game.
+    When you run the code coverage tool, make sure you run TestRunner, not RentACatImpl.  You can do that by clicking on and highlighting TestRunner.java before clicking on the code coverage button.  Alternatively, you can right click on TestRunner.java and click on the "Coverage as" item in the menu that pops up.  This is important.  If you run RentACat.java, you will be getting the code coverage while playing the game.
 
-Please submit by Monday (9/30) 11:59 PM to get timely feedback.
+    After you have created the screenshot, save the picture to a PDF file and submit to GradeScope at the "Exercise 2 Coverage" link.  Make sure the picture fits in one page for easy viewing and grading.
 
-IMPORTANT: Please keep the github private and add the following users as collaborators: nikunjgoel95, wonsunahn
+Please submit by Sunday (2/9) 11:59 PM to get timely feedback.
+
+IMPORTANT: Please keep the github private!
