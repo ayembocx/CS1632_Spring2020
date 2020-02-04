@@ -134,58 +134,58 @@ Once you start filling in tests in RentACatTest, you will start to see some of t
     ALL TESTS PASSED
     ```
 You have come full circle!  But wait, does this mean RentACat is bug-free?  How do you know if your unit tests themselves had defects and that's why they passed, even when RentACat is buggy?We have to actually verify the unit tests themselves to make sure that they are not defective!  One way to verify unit tests is to test them on buggy programs to see if they detect the bugs as they are intended to.  I have created a buggy version of Rent-A-Cat just for this purpose named RentACatBuggy.java.  In order to apply your unit tests to RentACatBuggy, execute the following.  For Windows:
-    ```
-    runBuggy.bat
-    ```
-    For Mac or Linux, try doing:
-    ```
-    bash runBuggy.sh
-    ```
+```
+runBuggy.bat
+```
+For Mac or Linux, try doing:
+```
+bash runBuggy.sh
+```
 This is the type of output you should expect to get:
-    ```
-    TESTING BUGGY IMPLEMENTATION
+```
+TESTING BUGGY IMPLEMENTATION
     
-    testCatAvailableFalseNumCats0(RentACatTest): null
-    testCatAvailableFalseNumCats3(RentACatTest): null
-    testCatAvailableTrueNumCats3(RentACatTest): null
-    testCatExistsFalseNumCats0(RentACatTest): null
-    testCatExistsTrueNumCats3(RentACatTest): null
-    testListCatsNumCats0(RentACatTest): expected:<[empty]> but was:<[]>
-    testListCatsNumCats3(RentACatTest): expected:<ID 1. Jennyanydots[       ID 2. Old Deuteronomy   ID 3. Mistoffelees              ]> but was:<ID 1. Jennyanydots[
-    ID 2. Old Deuteronomy
-    ID 3. Mistoffelees
-    ]>
-    testRentCatFailureNumCats0(RentACatTest): null
-    testRentCatNumCats3(RentACatTest):
-    Wanted but not invoked:
-    cat.rentCat();
-    -> at RentACatTest.testRentCatNumCats3(RentACatTest.java:255)
-    
-    However, there were other interactions with this mock:
-    cat.getId();
-    -> at RentACatBuggy.getCat(RentACatBuggy.java:143)
-    
-    cat.getRented();
-    -> at RentACatBuggy.rentCat(RentACatBuggy.java:41)
-    
-    
-    testReturnCatFailureNumCats0(RentACatTest): null
-    testReturnCatNumCats3(RentACatTest):
-    Wanted but not invoked:
-    cat.returnCat();
-    -> at RentACatTest.testReturnCatNumCats3(RentACatTest.java:292)
-    
-    However, there were other interactions with this mock:
-    cat.getId();
-    -> at RentACatBuggy.getCat(RentACatBuggy.java:143)
-    
-    cat.getRented();
-    -> at RentACatBuggy.returnCat(RentACatBuggy.java:21)
-    
-    
-    
-    !!! - At least one failure, see above.
-    ```
+testCatAvailableFalseNumCats0(RentACatTest): null
+testCatAvailableFalseNumCats3(RentACatTest): null
+testCatAvailableTrueNumCats3(RentACatTest): null
+testCatExistsFalseNumCats0(RentACatTest): null
+testCatExistsTrueNumCats3(RentACatTest): null
+testListCatsNumCats0(RentACatTest): expected:<[empty]> but was:<[]>
+testListCatsNumCats3(RentACatTest): expected:<ID 1. Jennyanydots[       ID 2. Old Deuteronomy   ID 3. Mistoffelees              ]> but was:<ID 1. Jennyanydots[
+ID 2. Old Deuteronomy
+ID 3. Mistoffelees
+]>
+testRentCatFailureNumCats0(RentACatTest): null
+testRentCatNumCats3(RentACatTest):
+Wanted but not invoked:
+cat.rentCat();
+-> at RentACatTest.testRentCatNumCats3(RentACatTest.java:255)
+
+However, there were other interactions with this mock:
+cat.getId();
+-> at RentACatBuggy.getCat(RentACatBuggy.java:143)
+
+cat.getRented();
+-> at RentACatBuggy.rentCat(RentACatBuggy.java:41)
+
+
+testReturnCatFailureNumCats0(RentACatTest): null
+testReturnCatNumCats3(RentACatTest):
+Wanted but not invoked:
+cat.returnCat();
+-> at RentACatTest.testReturnCatNumCats3(RentACatTest.java:292)
+
+However, there were other interactions with this mock:
+cat.getId();
+-> at RentACatBuggy.getCat(RentACatBuggy.java:143)
+
+cat.getRented();
+-> at RentACatBuggy.returnCat(RentACatBuggy.java:21)
+
+
+
+!!! - At least one failure, see above.
+```
 You can see that all tests fail except the ones for getCat(int id).  That is because I've inserted bugs into RentACatBuggy except for that method.  If your unit test passes any other method, it must be defective.  Time to fix your test.
 
 ## Submission
