@@ -6,10 +6,17 @@ import org.junit.runner.notification.*;
 public class TestRunner {
 	public static void main(String[] args) {
 
+		if (args.length > 0 && args[0].equals("buggy")) {
+			RentACatTest._testRentACatBuggy = true;
+			System.out.println("TESTING BUGGY IMPLEMENTATION\n");
+		}
+		
 		ArrayList<Class> classesToTest = new ArrayList<Class>();
 		boolean anyFailures = false;
 
 		// ADD ANY CLASSES YOU WISH TO TEST HERE
+
+		classesToTest.add(RentACatTest.class);
 
 		// For all test classes added, loop through and use JUnit
 		// to run them.
