@@ -79,7 +79,6 @@ public class RentACatTest {
 	@Test
 	public void testGetCatNullNumCats0() {
 		// TODO
-		assertFalse("True is not false", true);
 	}
 
 	/**
@@ -199,18 +198,17 @@ public class RentACatTest {
 	/**
 	 * Test case for boolean rentCat(int id).
 	 * Preconditions: _c1, _c2, and _c3 are added to _r using addCat(Cat c).
-	 *                _c2 is not rented.
+	 *                _c2 is rented.
 	 * Execution steps: Call rentCat(2).
-	 * Postconditions: Return value is true.
-	 *                 _c2.rentCat() is called exactly once.
-	 *                 _c1.rentCat() and _c3.rentCat are never called.
+	 * Postconditions: Return value is false.
+	 *                 _c1.rentCat(), _c2.rentCat(), _c3.rentCat() are never called.
 	 *                 
 	 * Hint: See Example/NoogieTest.java in testBadgerPlayCalled method to see an
 	 * example of behavior verification.
 	 */
 	
 	@Test
-	public void testRentCatNumCats3() {
+	public void testRentCatFailureNumCats3() {
 		// TODO
 	}
 

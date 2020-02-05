@@ -59,7 +59,7 @@ You will modify two classes: RentACatImpl and RentACatTest.  The RentACatImpl cl
 
 We are going to use the TestRunner class to invoke JUnit on the RentACatTest class.  Note that RentACatTest.class is added to the list of classesToTest.
 
-You should use test doubles/mocks for any references to classes other than the one under test that the tested class is dependent upon (i.e., double or mock any Cat objects).  You do not need to double the ArrayList class used within RentACatImpl even though RentACatImpl is dependent upon it.  ArrayList is a Java standard library class so we will assume that it has fully tested and defect-free at this point. :)
+You should use test doubles/mocks for any references to classes other than the one under test that the tested class is dependent upon (i.e., double or mock any Cat objects).  You do not need to double the ArrayList class used within RentACatImpl even though RentACatImpl is dependent upon it.  ArrayList is a Java standard library class so we will assume that it is fully tested and defect-free at this point. :)
 
 You do not need to test any of the methods in the Cat class since that is an external class that is beyond the unit we are trying to test.
 
@@ -130,62 +130,62 @@ If you do this in an IDE such as Eclipse, or with a build tool like Gradle, this
 ## Expected Outcome
 
 Once you start filling in tests in RentACatTest, you will start to see some of those tests fail for those methods you haven't completed yet for RentACatImpl.  As you start filling in the methods in RentACatImpl, those failures will go away one by one until you again see the output:
-    ```
-    ALL TESTS PASSED
-    ```
+```
+ALL TESTS PASSED
+```
 You have come full circle!  But wait, does this mean RentACat is bug-free?  How do you know if your unit tests themselves had defects and that's why they passed, even when RentACat is buggy?We have to actually verify the unit tests themselves to make sure that they are not defective!  One way to verify unit tests is to test them on buggy programs to see if they detect the bugs as they are intended to.  I have created a buggy version of Rent-A-Cat just for this purpose named RentACatBuggy.java.  In order to apply your unit tests to RentACatBuggy, execute the following.  For Windows:
-    ```
-    runBuggy.bat
-    ```
-    For Mac or Linux, try doing:
-    ```
-    bash runBuggy.sh
-    ```
+```
+runBuggy.bat
+```
+For Mac or Linux, try doing:
+```
+bash runBuggy.sh
+```
 This is the type of output you should expect to get:
-    ```
-    TESTING BUGGY IMPLEMENTATION
+```
+TESTING BUGGY IMPLEMENTATION
     
-    testCatAvailableFalseNumCats0(RentACatTest): null
-    testCatAvailableFalseNumCats3(RentACatTest): null
-    testCatAvailableTrueNumCats3(RentACatTest): null
-    testCatExistsFalseNumCats0(RentACatTest): null
-    testCatExistsTrueNumCats3(RentACatTest): null
-    testListCatsNumCats0(RentACatTest): expected:<[empty]> but was:<[]>
-    testListCatsNumCats3(RentACatTest): expected:<ID 1. Jennyanydots[       ID 2. Old Deuteronomy   ID 3. Mistoffelees              ]> but was:<ID 1. Jennyanydots[
-    ID 2. Old Deuteronomy
-    ID 3. Mistoffelees
-    ]>
-    testRentCatFailureNumCats0(RentACatTest): null
-    testRentCatNumCats3(RentACatTest):
-    Wanted but not invoked:
-    cat.rentCat();
-    -> at RentACatTest.testRentCatNumCats3(RentACatTest.java:255)
-    
-    However, there were other interactions with this mock:
-    cat.getId();
-    -> at RentACatBuggy.getCat(RentACatBuggy.java:143)
-    
-    cat.getRented();
-    -> at RentACatBuggy.rentCat(RentACatBuggy.java:41)
-    
-    
-    testReturnCatFailureNumCats0(RentACatTest): null
-    testReturnCatNumCats3(RentACatTest):
-    Wanted but not invoked:
-    cat.returnCat();
-    -> at RentACatTest.testReturnCatNumCats3(RentACatTest.java:292)
-    
-    However, there were other interactions with this mock:
-    cat.getId();
-    -> at RentACatBuggy.getCat(RentACatBuggy.java:143)
-    
-    cat.getRented();
-    -> at RentACatBuggy.returnCat(RentACatBuggy.java:21)
-    
-    
-    
-    !!! - At least one failure, see above.
-    ```
+testCatAvailableFalseNumCats0(RentACatTest): null
+testCatAvailableFalseNumCats3(RentACatTest): null
+testCatAvailableTrueNumCats3(RentACatTest): null
+testCatExistsFalseNumCats0(RentACatTest): null
+testCatExistsTrueNumCats3(RentACatTest): null
+testListCatsNumCats0(RentACatTest): expected:<[empty]> but was:<[]>
+testListCatsNumCats3(RentACatTest): expected:<ID 1. Jennyanydots[       ID 2. Old Deuteronomy   ID 3. Mistoffelees              ]> but was:<ID 1. Jennyanydots[
+ID 2. Old Deuteronomy
+ID 3. Mistoffelees
+]>
+testRentCatFailureNumCats0(RentACatTest): null
+testRentCatNumCats3(RentACatTest):
+Wanted but not invoked:
+cat.rentCat();
+-> at RentACatTest.testRentCatNumCats3(RentACatTest.java:255)
+
+However, there were other interactions with this mock:
+cat.getId();
+-> at RentACatBuggy.getCat(RentACatBuggy.java:143)
+
+cat.getRented();
+-> at RentACatBuggy.rentCat(RentACatBuggy.java:41)
+
+
+testReturnCatFailureNumCats0(RentACatTest): null
+testReturnCatNumCats3(RentACatTest):
+Wanted but not invoked:
+cat.returnCat();
+-> at RentACatTest.testReturnCatNumCats3(RentACatTest.java:292)
+
+However, there were other interactions with this mock:
+cat.getId();
+-> at RentACatBuggy.getCat(RentACatBuggy.java:143)
+
+cat.getRented();
+-> at RentACatBuggy.returnCat(RentACatBuggy.java:21)
+
+
+
+!!! - At least one failure, see above.
+```
 You can see that all tests fail except the ones for getCat(int id).  That is because I've inserted bugs into RentACatBuggy except for that method.  If your unit test passes any other method, it must be defective.  Time to fix your test.
 
 ## Submission
@@ -198,7 +198,7 @@ You will do two submissions for this exercise.
 
 1. Create a screenshot of code coverage stats given by your IDE of choice and name it code_coverage.png. Example:
 
-    https://github.com/wonsunahn/CS1632_Fall2019/blob/master/exercises/2/code_coverage.png
+    https://github.com/wonsunahn/CS1632_Spring2020/blob/master/exercises/2/code_coverage.png
 
     I used Eclipse to generate the screenshot.  Here is the user guide: https://www.eclemma.org/userdoc/launching.html.  It is just a click of a button and requires no extra installation.  You don't have to have 100% coverage for this exercise but you will have coverage requirements for your deliverable.  I have already created an Eclipse project for you in the exercise directory so you can just open that to run TestRunner using File > Open Projects from File System from the menu.  If you can't open the project for some reason, you need to create a new project using File > New > Java Project.  For those of you who are new to eclipse, you need to include the four JAR files under CommandLineJUnit/ as external JARs for it to compile.  You need to go to project properties > Java Build Path > Libraries and Add JARs or Add External JARs.  Also, don't create module-info.java when prompted.
     
@@ -209,3 +209,13 @@ You will do two submissions for this exercise.
 Please submit by Sunday (2/9) 11:59 PM to get timely feedback.
 
 IMPORTANT: Please keep the github private!
+
+## GradeScope Feedback
+
+The GradeScope autograder works in 3 phases:
+1. RentACatTestSolution.(some method) on RentACatImpl: RentACatTestSolution is the solution implementation of RentACatTest.  The purpose of this phase is to test RentACatImpl for defects.
+1. RentACatTest.(some method) on RentACatImpl: RentACatTest is the your submitted implementation of RentACatTest.  The purpose of this phase is to test RentACatTest itself for defects.  Assuming RentACatImpl is defect free (as tested in phase 1.), then all tests in RentACatTest should pass.
+1. RentACatTest.(some method) on RentACatBuggy: RentACatTest is the your submitted implementation of RentACatTest and you are testing against the buggy RentACatBuggy implementation.  The purpose of this phase is to further test RentACatTest for defects more rigorously.  It does this by testing whether RentACatTest finds all the bugs that RentACatTestSolution is able to find within RentACatBuggy.
+If you see test failures, read the feedback given by the autograder, fix your code, and retry.
+
+Beside the feedback given by the autograder, the TA or myself will leave more detailed feedback on the "Feedback on source code" question.  We will also check your code coverage screenshot submission and give feedback.
