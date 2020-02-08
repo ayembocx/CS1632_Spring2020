@@ -3,6 +3,8 @@ Spring Semester 2020
 
 * DUE: February 28, 2020 11:59 PM
 
+WARNING: Make sure you keep your GitHub repository _PRIVATE_.  Otherwise, you may be held responsible for abetting plagiarism.
+
 ## Deliverable 2
 
 For this assignment, your group will write code and unit tests for an
