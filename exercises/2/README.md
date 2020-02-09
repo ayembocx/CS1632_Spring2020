@@ -219,3 +219,26 @@ The GradeScope autograder works in 3 phases:
 If you see test failures, read the feedback given by the autograder, fix your code, and retry.
 
 Beside the feedback given by the autograder, the TA or myself will leave more detailed feedback on the "Feedback on source code" question.  We will also check your code coverage screenshot submission and give feedback.
+
+## Resources
+
+These links are the same ones posted at the end of the slides:
+
+* JUnit User manual:  
+https://junit.org/junit5/docs/current/user-guide/  
+The Writing Tests section is probably the most useful.
+
+* JUnit Reference Javadoc:  
+http://junit.sourceforge.net/javadoc/  
+For looking up methods only, not a user guide.
+
+* Mockito User Manual:  
+https://javadoc.io/static/org.mockito/mockito-core/3.2.4/org/mockito/Mockito.html  
+Most useful is the sections about verification and stubbing.
+
+* Eclipse IDE
+If you want more information, here is a page put up by a U Chicago professor:  
+http://people.cs.uchicago.edu/~kaharris/10200/tutorials/eclipse/index.html  
+It uses a much earlier version of Eclipse, but other than the outdated UI, the operations are the same.  I looked at several resources and this one was the most concise and to the point.  A more comprehensive manual is at eclipse.org:  
+https://help.eclipse.org/2019-12/index.jsp  
+Look at the "Java development user guide" chapter on the left.
