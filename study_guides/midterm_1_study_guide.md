@@ -2,7 +2,7 @@
 
 The midterm is on FEB 19 (Wed), 2020.
 
-The midterm will cover everything we have covered up to Writing Testable Code on 2 OCT (i.e., nothing from Pairwise and Combinatorial Testing will be included).  I recommend you review the slides and the textbook (See syllabus.md for which chapters are required reading.  The reading is also on the last slide of each lecture).  You are also expected to have completed Exercises 1 and 2, and be able to answer related questions.
+The midterm will cover everything up to Writing Testable Code.  I recommend you review the slides and the textbook (See syllabus.md for which chapters are required reading.  The reading is also on the last slide of each lecture).  Going over the TopHat questions will be quite helpful too.  You are also expected to have completed Exercises 1 and 2, and be able to answer related questions.
 
 The exam will consist of these types of questions:
   * Multiple choice questions
