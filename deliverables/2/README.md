@@ -73,11 +73,7 @@ of adding a feature or refactoring your code, you will know immediately.
 
 ## Expected Outcome
 
-At the end, code coverage of the class CoffeeMakerQuestImpl when the JUnit
-TestRunner is run should be at an absolute minimum of 80%.  If coverage falls
-below that number, add more JUnit tests in CoffeeMakerQuestTest.
-
-Also, you should see the following output when running runTest.bat (or runTest.sh):
+You should see the following output when running runTest.bat (or runTest.sh):
 ```
 ALL TESTS PASSED
 ```
@@ -139,10 +135,33 @@ testSetCurrentRoom(CoffeeMakerQuestTest): null
 ```
 This tells you that you have written your JUnit tests well so that they are able to find the bugs in CoffeeMakerQuestBuggy.
 
+## Additional Requirements
+
+* Code coverage of the class CoffeeMakerQuestImpl when the JUnit TestRunner is
+  run should be at an absolute minimum of 80%.  If coverage falls below that
+number, add more unit tests in CoffeeMakerQuestTest.
+
+* Write at least one private method while implementing CoffeeMakerQuestImpl.
+  Add at least one unit test that tests that private method at the very bottom
+of CoffeeMakerQuestTest.
+
+* Coding style is also important for software quality in the long run (even
+  though they are not technically defects as we learned).  Make sure your
+methods and variables are named according to some convention.  A widely used
+convention is called
+[lowerCamelCase](https://en.wikipedia.org/wiki/Naming_convention_(programming)#Java)
+convention.  That is the convention that was [first adopted when Sun
+Microsystems first created the Java
+language](https://www.oracle.com/technetwork/java/codeconventions-135099.html).
+This is still the convention at the biggest companies using Java like
+[Oracle](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html)
+and [Google](https://google.github.io/styleguide/javaguide.html#s5-naming).
+
 ## Grading
 
 * GradeScope autograder: 70% of grade
-* Source code style / naming / formatting: 15% of grade
+* Private method added and tested: 5% of grade
+* Source code style (naming / formatting): 10% of grade
 * Code coverage: 15% of grade
 
 Please review the grading_rubric.txt for details.
