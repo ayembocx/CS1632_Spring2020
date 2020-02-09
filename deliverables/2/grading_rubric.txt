@@ -4,13 +4,16 @@ Grading Rubric for D2
 
 This is the score you get from GradeScope source code autograder.
 
-* Source code style / name / formatting: 15% of grade
+* Tested a private method: 5% of grade
 
-Written in good style overall:       ____ / 5
+Use Java reflection as we learned during class.
+Review slides and textbook (Chap. 24) to refresh your memory.
 
-Names are descriptive and uniform:   ____ / 5
+* Source code style (name / formatting): 10% of grade
 
-Indentations are uniform:            ____ / 5
+Names are in lower camel case:       ____ / 5
+
+Formatting is uniform:               ____ / 5
 
 * Code coverage: 15% of grade
 

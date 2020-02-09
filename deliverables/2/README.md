@@ -146,9 +146,9 @@ number, add more unit tests in CoffeeMakerQuestTest.
 of CoffeeMakerQuestTest.
 
 * Coding style is also important for software quality in the long run (even
-  though they are not technically defects as we learned).  Make sure your
-methods and variables are named according to some convention.  A widely used
-convention is called
+  though they are not technically defects as we learned).  In particular, a
+uniform naming convention greatly improves the readability of your code.  A
+widely used convention is called
 [lowerCamelCase](https://en.wikipedia.org/wiki/Naming_convention_(programming)#Java)
 convention.  That is the convention that was [first adopted when Sun
 Microsystems first created the Java
@@ -156,12 +156,16 @@ language](https://www.oracle.com/technetwork/java/codeconventions-135099.html).
 This is still the convention at the biggest companies using Java like
 [Oracle](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html)
 and [Google](https://google.github.io/styleguide/javaguide.html#s5-naming).
+Please make sure you follow the lower camel case convention for all your
+variables and methods for this project.  There is less agreement on other
+formatting issues like indentation and line wrapping, but try to maintain a
+uniform convention whatever you choose.
 
 ## Grading
 
 * GradeScope autograder: 70% of grade
 * Private method added and tested: 5% of grade
-* Source code style (naming / formatting): 10% of grade
+* Source code style (lower camel case naming / formatting): 10% of grade
 * Code coverage: 15% of grade
 
 Please review the grading_rubric.txt for details.
