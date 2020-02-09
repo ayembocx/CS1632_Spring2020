@@ -2,9 +2,13 @@ Grading Rubric for D2
 
 * GradeScope autograder: 70% of grade
 
+Autograder score:                    ____ / 70 
+
 This is the score you get from GradeScope source code autograder.
 
 * Tested a private method: 5% of grade
+
+Tested a private method:             ____ / 5
 
 Use Java reflection as we learned during class.
 Review slides and textbook (Chap. 24) to refresh your memory.
