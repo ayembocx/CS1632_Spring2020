@@ -1,0 +1,35 @@
+Grading Rubric for D2
+
+* GradeScope autograder: 70% of grade
+
+This is the score you get from GradeScope source code autograder.
+
+* Source code style / name / formatting: 15% of grade
+
+Written in good style overall:       ____ / 5
+
+Names are descriptive and uniform:   ____ / 5
+
+Indentations are uniform:            ____ / 5
+
+* Code coverage: 15% of grade
+
+Coverage screenshot submitted:       ____ / 5
+
+Must show coverage % of CoffeeMakerQuestImpl.
+Must show methods in CoffeeMakerQuestImpl.
+
+Coverage exceeds 80%:                ____ / 10
+
+If 80% <= coverage <= 100%, 10 points
+If 70% <= coverage < 80%, 8 points
+If 60% <= coverage < 70%, 7 points
+If 50% <= coverage < 60%, 6 points
+If 40% <= coverage < 50%, 5 points
+If 30% <= coverage < 40%, 4 points
+If 20% <= coverage < 30%, 3 points
+If 10% <= coverage < 20%, 2 points
+If 0% <= coverage < 10%, 1 points
+***
+
+Total:                               ____ / 100

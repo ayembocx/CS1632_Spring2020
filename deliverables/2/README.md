@@ -61,8 +61,6 @@ IS during grading.  Here is a brief rundown of the classes:
     bash runTestBuggy.sh
     ```
 
-Code coverage should be at an absolute minimum of 80% for each of your classes.
-
 ## Development Methodology
 
 Like Exercise 2, we will try to apply the Test Driven Development (TDD) model
@@ -73,7 +71,11 @@ of adding a feature or refactoring your code, you will know immediately.
 
 ## Expected Outcome
 
-If you did a good job, you should see the following output when running runTest.bat (or runTest.sh):
+At the end, code coverage of the class CoffeeMakerQuestImpl when the JUnit
+TestRunner is run should be at an absolute minimum of 80%.  If coverage falls
+below that number, add more JUnit tests in CoffeeMakerQuestTest.
+
+Also, you should see the following output when running runTest.bat (or runTest.sh):
 ```
 ALL TESTS PASSED
 ```
@@ -135,9 +137,13 @@ testSetCurrentRoom(CoffeeMakerQuestTest): null
 ```
 This tells you that you have written your JUnit tests well so that they are able to find the bugs in CoffeeMakerQuestBuggy.
 
-## Grading Breakdown
+## Grading
 
-TBA soon.
+* GradeScope autograder: 70% of grade
+* Source code style / naming / formatting: 15% of grade
+* Code coverage: 15% of grade
+
+Please review the grading_rubric.txt for details.
 
 ## Submission
 
@@ -156,3 +162,29 @@ You will do two submissions for this exercise.
     When you run the code coverage tool, make sure you run TestRunner, not RentACatImpl.  You can do that by clicking on and highlighting TestRunner.java before clicking on the code coverage button.  Alternatively, you can right click on TestRunner.java and click on the "Coverage as" item in the menu that pops up.  This is important.  If you run RentACat.java, you will be getting the code coverage while playing the game.
 
     After you have created the screenshot, save the picture to a PDF file and submit to GradeScope at the "Deliverable 2 Coverage" link.  Make sure the picture fits in one page for easy viewing and grading.
+
+## GradeScope Feedback
+
+It is encouraged that you submit to GradeScope early and often.  Please use the feedback you get on each submission to improve your code!
+
+The GradeScope autograder works in 3 phases:
+
+1. CoffeeMakerQuestImpl verification using CoffeeMakerQuestTestSolution:
+   CoffeeMakerQuestTestSolution is the solution implementation of
+CoffeeMakerQuestTest.  The purpose of this phase is to test RentACatImpl for
+defects.
+
+1. CoffeeMakerQuestTest on CoffeeMakerQuestImpl: The purpose of this phase is
+   to test CoffeeMakerQuestTest itself for defects.  Assuming
+CoffeeMakerQuestImpl is defect free (as verified in phase 1.), any test
+failures in CoffeeMakerQuestTest while testing CoffeeMakerQuestImpl indicate a
+bug in CoffeeMakerQuestTest.
+
+1. CoffeeMakerQuestTest on CoffeeMakerQuestBuggy: The purpose of this phase is
+   to test CoffeeMakerQuestTest against the buggy CoffeeMakerQuestBuggy
+implementation.  The class CoffeeMakerQuestBuggy is given to you in the form of
+the coffeemaker-buggy.jar file.  Since CoffeeMakerQuestBuggy is buggy, you
+expect the tests to fail this time.  If CoffeeMakerQuestTestSolution fails a
+test but CoffeeMakerQuestTest passes a test, then this indicates a problem (and
+vice versa).
+
