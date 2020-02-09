@@ -21,6 +21,9 @@ Must show methods in CoffeeMakerQuestImpl.
 
 Coverage exceeds 80%:                ____ / 10
 
+This number pertains to the CoffeeMakerQuestImpl class only,
+not CoffeeMakerQuestImpl.java including the Item enum.
+
 If 80% <= coverage <= 100%, 10 points
 If 70% <= coverage < 80%, 8 points
 If 60% <= coverage < 70%, 7 points
@@ -30,6 +33,7 @@ If 30% <= coverage < 40%, 4 points
 If 20% <= coverage < 30%, 3 points
 If 10% <= coverage < 20%, 2 points
 If 0% <= coverage < 10%, 1 points
+
 ***
 
 Total:                               ____ / 100
