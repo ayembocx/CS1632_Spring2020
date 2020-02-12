@@ -1,6 +1,6 @@
 # CS 1632 Midterm 1 Exam Study Guide - Spring 2020
 
-The midterm is on FEB 19 (Wed), 2020.
+The midterm is on FEB 19 (Wed) if you are in the Mon/Wed class or FEB 20 (Thu) if you are in the Tue/Thu class.
 
 The midterm will cover everything up to Writing Testable Code.  I recommend you review the slides and the textbook (See syllabus.md for which chapters are required reading.  The reading is also on the last slide of each lecture).  Going over the TopHat questions will be quite helpful too.  You are also expected to have completed Exercises 1 and 2, and be able to answer related questions.
 
