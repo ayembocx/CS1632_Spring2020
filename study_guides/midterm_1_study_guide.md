@@ -55,6 +55,15 @@ Here are the key topics to study in preparation for the test.
 
 ## BREAKING SOFTWARE
 * Given buggy code, be able to recognize what the problem is and be able to categorize it.
+  * Logic errors
+  * Null pointer errors
+  * Floating point / Rounding errors
+  * Integration errors
+  * Missing data errors
+  * Bad data errors
+  * Display errors
+  * I/O errors
+  * Configuration errors
 
 ## AUTOMATED TESTING
 * Be able to discuss in-depth of the pros and cons of automated testing.
@@ -85,9 +94,14 @@ Here are the key topics to study in preparation for the test.
 
 ## WRITING TESTABLE CODE
 * Be able to explain basic strategies for testable code.
+  * Segment code - make it modular
   * The DRY Principle
+  * Give yourself something to test
   * TUFs and TUCs
-  * Make it repeatable
+  * Make it easy to satisfy preconditions
+  * Make it easy to reproduce
+  * Make it easy to localize
+* Be able to perform dependency injection for localization or reproducibility (See TopHat questions).
 * Be able to describe two strategies for dealing with legacy code.
   * Pinning tests
   * Seams
