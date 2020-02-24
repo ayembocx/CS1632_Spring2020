@@ -72,4 +72,4 @@ Fortunately, the website you will test for Deliverable 3 is not very complex and
 
 There is no submission for this exercise.  Please practice until you have gained confidence.
  
-My test cases are stored at Reddit Cats.side.  Feel free to load them and try them out.  Compare with your test cases and see what's different.  It is in JSON format so you should be able to open it with a text editor and trace it with your eyes, if that's what you prefer.
+My test cases are stored at [Reddit Cats.side](Reddit Cats.side).  Feel free to load them and try them out.  Compare with your test cases and see what's different.  It is in JSON format so you should be able to open it with a text editor and trace it with your eyes, if that's what you prefer.
