@@ -11,7 +11,7 @@ public class CoffeeMakerQuestTest {
 	@Mock
 	Player player;
 	@Mock
-	Room room1;	// Small room
+	Room room1;	// Magenta room
 	@Mock
 	Room room2;	// Funny room
 	@Mock
