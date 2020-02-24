@@ -103,7 +103,9 @@ public class CoffeeMakerQuestImpl implements CoffeeMakerQuest {
 	 * lower-case). For the response strings, observe the response strings printed
 	 * by coffeemaker.jar. The "N" and "S" commands potentially change the location
 	 * of the player. The "L" command potentially adds an item to the player
-	 * inventory. The "D" command drinks the coffee and ends the game.
+	 * inventory. The "D" command drinks the coffee and ends the game. Make
+     * sure you use Player.getInventoryString() whenever you need to display
+     * the inventory.
 	 * 
 	 * @param cmd the user command
 	 * @return response string for the command
