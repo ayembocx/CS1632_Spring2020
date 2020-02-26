@@ -22,7 +22,7 @@ FUN-TITLE: "assert title"
 
 FUN-JOIN-BUTTON-EXISTS - "assert text"
 
-FUN-SIGNUP-LINK - "store attribute" followed by "assert".  There is a defect in Selenium IDE with the "store attribute" command where the target selector button is disabled, when it should be enabled.  A work around is to enter a command such as "assert text" or "click" which allows you to use the target selector, fill in the locator string using it, and then revert to "store attribute".  As I said, Selenium web driver is very mature Selenium IDE is a work in progress. :)
+FUN-SIGNUP-LINK - "store attribute" followed by "assert".  There is a defect in Selenium IDE with the "store attribute" command where the target selector button is disabled when it should be enabled.  A work around is to enter a command such as "assert text" or "click" which allows you to use the target selector, fill in the locator string using it, and then revert to "store attribute".  As I said, while Selenium web driver is very mature, Selenium IDE is a work in progress. :)
 
 FUN-SEARCH-SMELLY-CAT - "assert text"
 
