@@ -1,6 +1,6 @@
 ## App homepage: https://cs1632ex.herokuapp.com/
 
-FUN-WELCOME - The homepage shall display the text "Welcome, friend, to a land of pure calculation" as well as "Used for CS1632 Software Quality Assurance, taught by Bill Laboon".  There may or may not be carriage returns ("\n") in either of these texts.
+FUN-WELCOME - The homepage shall display the text "CS1632 D3" and below it, "Welcome, friend,\nto a land of pure calculation.\nTHE WORLD IS YOUR OYSTER".
 
 FUN-LINKS - Every page shall include five links at the top, to "CS1632 D3 Home", "Factorial", "Fibonacci", "Hello", and "Cathedral Pics".  These shall link to `/`, `/fact`, `/fib`, `/hello`, and `/cathy`, respectively.
 
