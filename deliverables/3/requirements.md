@@ -14,4 +14,4 @@ FUN-HELLO - Accessing the hello page (`/hello`) with no trailing values in the U
 
 FUN-HELLO-TRAILING - If a trailing value is provided in the URL when accessing the `/hello` page, then the message shall display hello from that trailing value.  For example, when accessing `/hello/Jazzy`, the system shall display "Hello CS1632, from Jazzy!".  This shall work for all input values.
 
-FUN-CATHY - The Cathedral page (`/cathy`) shall display three images of the Cathedral of Learning in a numbered list.
+FUN-CATHY - The Cathedral page (`/cathy`) shall display exactly three images in a numbered list.  The image source URLs for them shall be /images/cl.jpg, /images/clalp.jpg, and /images/clold.jpg, in that order.
