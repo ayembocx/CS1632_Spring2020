@@ -73,3 +73,10 @@ Fortunately, the website you will test for Deliverable 3 is not very complex and
 There is no submission for this exercise.  Please practice until you have gained confidence.
  
 My test cases are stored at the "Reddit Cats.side" file.  Feel free to load them into Selenium IDE my opening the project and try them out.  Compare with your test cases and see what's different.  It is in JSON format so you should be able to open it with a text editor and trace it with your eyes, if that's what you prefer.
+
+## Resources
+
+These links are the same ones posted at the end of the slides:
+
+* Selenium IDE Command Reference:  
+https://www.selenium.dev/selenium-ide/docs/en/api/commands

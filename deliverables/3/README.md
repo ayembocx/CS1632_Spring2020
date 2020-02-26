@@ -1,7 +1,7 @@
 # CS 1632 - Software Quality Assurance
 Spring Semester 2020
 
-DUE: TBD
+DUE: March 17, 2020 11:59 PM
 
 WARNING: This is posted just to give you an idea of what's coming.  Details are subject to change before release.
 
@@ -20,7 +20,7 @@ For the summary, add a description of issues you faced when writing these tests 
 
 ON A SEPARATE PAGE, write the traceability matrix based on the requirements and test cases.
 
-ON A SEPARATE PAGE, copy and paste the printout of the test execution results shown in the Log window for each test case.
+ON A SEPARATE PAGE, copy and paste the printout of the test execution results shown in the Log window for the entire test suite.  Make sure that each of your test cases appear once (and only once) in the log.
 
 ON A SEPARATE PAGE, write a defect report.  There should be at least 3 defects.  Each defect should contain all necessary components including REPRODUCTION STEPS, EXPECTED BEHAVIOR, OBSERVED BEHAVIOR, etc. described in Deliverable 1.
 
@@ -58,11 +58,20 @@ Please review grading\_rubric.txt for details.
 
 ## Submission
 
-Each pairwise group will submit the deliverable once to courseweb, by one member of the group. Under the "Course Documents" menu on the lefthand side, you will see an assignment named "Deliverable 3". Please upload a PDF format of your report. Don't forget your github url.
+1. You will create a github repository just for deliverable 3.  Add your partner as a collaborator so both of you have access.  Make sure you keep the repository *PRIVATE* so that nobody else can access your repository.
 
-IMPORTANT: Please keep the github private and add the following users as collaborators: nikunjgoel95, wonsunahn.
+1. Please use the ReportTemplate.docx file provided in this directory to write your report.  If you don't have a .docx compatible word processor, that's perfectly fine as long as you follow the same organization.  A PDF version of the file is at ReportTemplate.pdf.  Please make sure that the intro, traceability matrix, test suite log, and defects are on seperate pages.  _Please create a file named Report.pdf for your report and upload to the github repository._  
 
-Nik, our TA, will record the score for both of you on courseweb, along with feedback on where points have been deducted. You and your partner will get the same score. If you feel otherwise, let me know.
+1. _Please save your Selenium project to a file named deliverable3.side and also uploade to the github repository._
 
-Please post on the discussion board, or email me at wahn@pitt.edu, or come to office hours to discuss any problems you have.
- 
+Each pairwise group will submit the deliverable *once* to GradeScope using your github repository, by *one member* of the group.  The submitting member will press the "View or edit group" link at the top-right corner of the assignment page after submission to add his/her partner.  Make sure that your partner is there, or he/she will not get a grade.
+
+Please feel free to email me at wahn@pitt.edu or come to office hours to discuss any problems you have. 
+
+## Resources
+
+These links are the same ones posted at the end of the slides:
+
+* Selenium IDE Command Reference:  
+https://www.selenium.dev/selenium-ide/docs/en/api/commands
+
