@@ -1,6 +1,6 @@
 ## App homepage: https://cs1632ex.herokuapp.com/
 
-FUN-WELCOME - The homepage shall display the text "CS1632 D3" and below it, "Welcome, friend,\nto a land of pure calculation.\nTHE WORLD IS YOUR OYSTER".
+FUN-WELCOME - The homepage shall display the text "CS1632 D3" and below it, "Welcome, friend,\nto a land of pure calculation.\nTHE WORLD IS YOUR OYSTER".  The title shall be "CS1632 D3".
 
 FUN-LINKS - Every page shall include five links at the top, to "CS1632 D3 Home", "Factorial", "Fibonacci", "Hello", and "Cathedral Pics".  These shall link to `/`, `/fact`, `/fib`, `/hello`, and `/cathy`, respectively.
 
@@ -14,4 +14,4 @@ FUN-HELLO - Accessing the hello page (`/hello`) with no trailing values in the U
 
 FUN-HELLO-TRAILING - If a trailing value is provided in the URL when accessing the `/hello` page, then the message shall display hello from that trailing value.  For example, when accessing `/hello/Jazzy`, the system shall display "Hello CS1632, from Jazzy!".  This shall work for all input values.
 
-FUN-CATHY - The Cathedral page (`/cathy`) shall display exactly three images in a numbered list.  The image source URLs for them shall be /images/cl.jpg, /images/clalp.jpg, and /images/clold.jpg, in that order.
+FUN-CATHY - The Cathedral page (`/cathy`) shall display exactly three images in a numbered list.  The image source URLs for them shall be `/images/cl.jpg`, `/images/clalp.jpg`, and `/images/clold.jpg`, in that order.
