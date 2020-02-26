@@ -3,8 +3,6 @@ Spring Semester 2020
 
 DUE: March 17, 2020 11:59 PM
 
-WARNING: This is posted just to give you an idea of what's coming.  Details are subject to change before release.
-
 ## Deliverable 3
 
 For this assignment, you and a partner will write systems-level, automated black-box tests for a web app using the Selenium IDE. 
@@ -47,8 +45,8 @@ You may want to do some exploratory testing first to see what kind of issues are
 Please make a traceability matrix (just as in the first deliverable).  Tests should be identified by the name of the test case.
 
 ## Grading
-* Summary and Testing concerns - 10% 
-* Printout out of execution log - 5%
+* Summary and Testing concerns - 5% 
+* Printout out of execution log - 10%
 * Defect reports - 15%
 * Traceability matrix - 10%
 * Selenium IDE tests - 45%
