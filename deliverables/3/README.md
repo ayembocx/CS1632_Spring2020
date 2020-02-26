@@ -7,27 +7,26 @@ WARNING: This is posted just to give you an idea of what's coming.  Details are 
 
 ## Deliverable 3
 
-For this assignment, you and a partner will write systems-level, automated black-box tests for a web app using the Katalon Automation Recorder, a revamped variant of the Selenium IDE. 
+For this assignment, you and a partner will write systems-level, automated black-box tests for a web app using the Selenium IDE. 
 
 The web app is located here: https://cs1632ex.herokuapp.com/
 
 ## Format
 Everyone should have a title page with:
 * Your names
-* The URL of your code and tests on GitHub
 * The title "CS 1632 - DELIVERABLE 3: Automated Web Testing"
 
-For the summary, add a description of issues you faced when writing these tests and problems you would expect going forward based on your experiences.  If any tests you wrote fail (some should!), they should be included here.
+For the summary, add a description of issues you faced when writing these tests and problems you would expect when using Selenium IDE in your future workplaces based on your experiences.  If any tests you wrote fail (some should!), they should be included here.
 
 ON A SEPARATE PAGE, write the traceability matrix based on the requirements and test cases.
 
-ON A SEPARATE PAGE, copy and paste the printout of the test execution results shown in the Log window.
+ON A SEPARATE PAGE, copy and paste the printout of the test execution results shown in the Log window for each test case.
 
-ON A SEPARATE PAGE, write a defect report.  There should be at least 3 defects.  Each defect should contain all necessary components including REPRODUCTION STEPS, EXPECTED BEHAVIOR, OBSERVED BEHAVIOR, etc. described in Deliverable 1.  Also, below each defect report, attach a screenshot of the defect.  Screenshots are readily available if you click on the Screenshots window tab beside the Log window tab after running the test suite.  You can download individual screenshots in the .png format by clicking on each thumbnail.
+ON A SEPARATE PAGE, write a defect report.  There should be at least 3 defects.  Each defect should contain all necessary components including REPRODUCTION STEPS, EXPECTED BEHAVIOR, OBSERVED BEHAVIOR, etc. described in Deliverable 1.
 
-There is no need to print out the code.  It should be shared with me and the TA on GitHub.  The code should be a saved Katalon test suite.  Note that this should be an HTML file.  Please make the test case names descriptive!
+There is no need to print out the testing script (the .side file).  It should be submitted as a separate file as part of your GitHub submission.  Please make the test case names descriptive!
 
-There should be a bare minimum of 10 tests, checking various base, edge, and corner cases.  There is a maximum of 20 tests.  However, do not focus on the number of tests too heavily; I am more concerned that you cover all the requirements and check a broad variety of cases based on equivalence classes.
+There should be a bare minimum of 10 tests, checking various base, edge, and corner cases.  Please do not go beyond 20 tests.  Do not focus on the number of tests too heavily; I am more concerned that you cover all the requirements and check a broad variety of cases based on equivalence classes.
 
 ## Requirements
 
@@ -50,9 +49,9 @@ Please make a traceability matrix (just as in the first deliverable).  Tests sho
 ## Grading
 * Summary and Testing concerns - 10% 
 * Printout out of execution log - 5%
-* Defect screenshots and reports - 15%
+* Defect reports - 15%
 * Traceability matrix - 10%
-* Katalon tests - 45%
+* Selenium IDE tests - 45%
 * Defects are valid - 15%
 
 Please review grading\_rubric.txt for details.
