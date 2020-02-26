@@ -6,7 +6,7 @@ FUN-LINKS - Every page shall include five links at the top, to "CS1632 D3 Home",
 
 FUN-FACT - The factorial page (`/fact`) shall allow a user to enter a positive integer from 1 to 100, and upon pressing submit, shall show to the user the factorial of the value (e.g. "Factorial of 5 is 120!").
 
-FUN-FIB - The Fibonacci page (`/fib`) shall allow a user to enter a positive integer from 1 to 100, and upon pressing submit, shall show to the user the Fibonnaci of the value (e.g. "Fibonacci of 5 is 8!").
+FUN-FIB - The Fibonacci page (`/fib`) shall allow a user to enter a positive integer from 1 to 100, and upon pressing submit, shall show to the user the Fibonnaci of the value (e.g. "Fibonacci of 5 is 8!").  Note that the Fibonnaci series is assumed to start from index 0: f(0) = 1, f(1) = 1, f(2) = 2, f(3) = 3, f(4) = 5, f(5) = 8.
 
 FUN-INVALID-VALUE - For both the Fibonacci and Factorial pages, if a user enters an invalid value of any kind, they shall be informed that the value is 1 (e.g., "Fibonacci of -100 is 1!")
 
