@@ -7,13 +7,13 @@ Summary and testing concerns:                             _____ / 5
 Print out of test suite execution Log:                    _____ / 10
   
 Defects reported properly:                                _____ / 15
-  * Expected behavior / observed behavior / repro steps (-10 if not)
+  * Expected behavior / observed behavior / repro steps (-5 if not)
+  * Description contains the test case which triggered bug (-5 if not)
   * General quality. Well-specified, well-written. (-5 if not)
 
 Traceability Matrix                                       _____ / 10
   * -10 if not included
   * -5 for each requirement not tested
-  * -5 if test does not match requirement
 
 Selenium tests (45%):
 
@@ -30,14 +30,12 @@ Good style:                                               _____ / 10
 
 Defects (15%):
 
-If not at least three defects, maximum 10/25 on this section
-
 Three valid defects found:                                _____ / 15
   * Defect actually occurs (-5 if not)
 
 -----
 
-Submission issues (-10) or other adjustments:             _____
+Other adjustments:                                        _____
 
 Total:                                                    _____ / 100
 
