@@ -66,8 +66,7 @@ AFIST = [_A Friendly Introduction to Software Testing_](software-quality-assuran
 * (Class 1) Performance Testing
   * READING: AFIST, Chapter 19
   
-* (Class 2) Stochastic and Property-Based Testing
-  * READING: AFIST, Chapter 18 
+* (Class 2) EX4: Performance Testing
 
 ## WEEK 10 (Week of 9 MAR)
 
@@ -77,7 +76,8 @@ AFIST = [_A Friendly Introduction to Software Testing_](software-quality-assuran
 
 ## WEEK 11 (Week of 16 MAR)
 
-* (Class 1) EX4: Performance Testing / Stochastic Testing
+* (Class 1) Stochastic and Property-Based Testing
+  * READING: AFIST, Chapter 18
 
 * (Class 2) Pairwise and Combinatorial Testing
   * READING: AFIST, Chapter 17
