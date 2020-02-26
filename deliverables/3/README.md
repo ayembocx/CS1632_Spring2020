@@ -16,13 +16,13 @@ Everyone should have a title page with:
 
 For the summary, add a description of issues you faced when writing these tests and problems you would expect when using Selenium IDE in your future workplaces based on your experiences.  If any tests you wrote fail (some should!), they should be included here.
 
-ON A SEPARATE PAGE, write the traceability matrix based on the requirements and test cases.
+ON A SEPARATE PAGE, write the traceability matrix based on the requirements and test cases.  The test case names should be the same names you used in Selenium IDE.  Please make the test case names descriptive!
 
-ON A SEPARATE PAGE, copy and paste the printout of the test execution results shown in the Log window for the entire test suite.  Make sure that each of your test cases appear once (and only once) in the log.
+ON A SEPARATE PAGE, copy and paste the test suite execution results shown in the Log window for the entire test suite.  Make sure that each of your test cases appear once (and only once) in the log.  Please try to keep the original formatting (bold face and coloring); it just makes it easier to read.
 
-ON A SEPARATE PAGE, write a defect report.  There should be at least 3 defects.  Each defect should contain all necessary components including REPRODUCTION STEPS, EXPECTED BEHAVIOR, OBSERVED BEHAVIOR, etc. described in Deliverable 1.
+ON A SEPARATE PAGE, write a defect report.  There should be at least 3 defects.  Each defect should contain all necessary components including REPRODUCTION STEPS, EXPECTED BEHAVIOR, OBSERVED BEHAVIOR, etc. described in Deliverable 1.  Don't forget to include the test case you used to find the defect in DESCRIPTIONS.
 
-There is no need to print out the testing script (the .side file).  It should be submitted as a separate file as part of your GitHub submission.  Please make the test case names descriptive!
+There is no need to include the testing script (the .side file).  It should be submitted as a separate file as part of your GitHub submission.
 
 There should be a bare minimum of 10 tests, checking various base, edge, and corner cases.  Please do not go beyond 20 tests.  Do not focus on the number of tests too heavily; I am more concerned that you cover all the requirements and check a broad variety of cases based on equivalence classes.
 
