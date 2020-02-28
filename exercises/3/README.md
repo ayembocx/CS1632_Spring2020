@@ -16,20 +16,19 @@ https://www.selenium.dev/selenium-ide/docs/en/api/commands
 
 ## Assertion for each Test
 
-You will want to use the below assertions to test each of the requirements:
+You will want to use the below commands and assertions to test each of the requirements:
 
 FUN-TITLE: "assert title"
 
 FUN-JOIN-BUTTON-EXISTS - "assert text"
 
-FUN-SIGNUP-LINK - "store attribute" followed by "assert"
+FUN-SIGNUP-LINK - "store attribute" followed by "assert".  There is a defect in Selenium IDE with the "store attribute" command where the target selector button is disabled when it should be enabled.  A work around is to enter a command such as "assert text" or "click" which allows you to use the target selector, fill in the locator string using it, and then revert to "store attribute".  As I said, while Selenium web driver is very mature, Selenium IDE is a work in progress. :)
 
 FUN-SEARCH-SMELLY-CAT - "assert text"
 
 FUN-RULE-6 - "assert text"
 
-FUN-RULES-11-ITEMS - "assert element present" for the 11th item; "assert
-element not present" for the locator for the 12th item.
+FUN-RULES-11-ITEMS - "assert element present" for the 11th item; "assert element not present" for the locator for the 12th item.
 
 ## Tips
 
