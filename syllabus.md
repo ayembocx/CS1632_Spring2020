@@ -99,13 +99,17 @@ AFIST = [_A Friendly Introduction to Software Testing_](software-quality-assuran
 * (Class 1) Security Testing
   * READING: AFIST, Chapter 20
 
-* (Class 2) Guest Lecture, TBA
+* (Class 2) Midterm 2 review
 
 ## WEEK 15 (Week of 13 APR)
 
-* (Class 1) Midterm 2 review
+* For Mon/Wed class (Sections 1100, 1120):
+  * Mon: MIDTERM 2
+  * Wed: Google Guest Lecture: Software QA on the Cloud
 
-* (Class 2) MIDTERM 2
+* For Tue/Thu class (Section 1130):
+  * Tue: CGI Guest Lecture: TBD
+  * Thu: MIDTERM 2
 
 ## WEEK 16 (Week of 20 APR)
 
