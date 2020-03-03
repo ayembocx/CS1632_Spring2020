@@ -1,3 +1,4 @@
+// Bogus comment 2
 import java.util.ArrayList;
 
 import org.junit.runner.*;
