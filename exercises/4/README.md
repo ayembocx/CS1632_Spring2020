@@ -125,7 +125,7 @@ You will do two submissions for this exercise.
 
 1. You will create a github repository just for exercise 4.  Add your partner as a collaborator so both of you have access.  Make sure you keep the repository *PRIVATE* so that nobody else can access your repository.  This applies to all future submissions for this course.  Once you are done modifying code, don't forget to commit and push your changes to the github repository.  When you are done, submit your github repository to GradeScope at the "Exercise 4 GitHub" link.  Once you submit, GradeScope will run the autograder to grade you and give feedback.  If you get deductions, fix your code based on the feedback and resubmit.  Repeat until you don't get deductions.
 
-1. Create a screenshot of the VisualVM profiling result and name it profile.png. Example:
+1. Create a screenshot of the VisualVM profiling result running MonkeySim with argument 27 and name it profile.png. Example:
 
     https://github.com/wonsunahn/CS1632_Spring2020/blob/master/exercises/4/profile.png
 
