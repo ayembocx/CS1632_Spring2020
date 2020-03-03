@@ -74,25 +74,16 @@ Sample runs are shown in the sample_runs.txt file.
 
 ## How to Run MonkeySim
 
-1. Running MonkeySim. For Windows do (for running MonkeySim with argument 5):
+1. For Windows do (for running MonkeySim with argument 27):
     ```
-    run.bat 5
+    run.bat 27
     ```
-    For Mac / Linux do (for running MonkeySim with argument 5):
+1. For Mac / Linux do (for running MonkeySim with argument 27):
     ```
-    bash run.sh 5
+    bash run.sh 27
     ```
-1. Running MonkeySimTest. For Windows do:
-    ```
-    runTest.bat
-    ```
-    For Mac / Linux do:
-    ```
-    bash runTest.sh
-    ```    
-    If successful, you will get a bunch randomized string concatenation tests ending with the message "ALL TESTS PASSED".
 
-Alternatively, I've created an Eclipse project for you so you can use Eclipse to import the existing project.
+Alternatively, I've created an Eclipse project for you so you can use Eclipse to import the existing project and run it from there.
 
 ## What to do
 
@@ -118,9 +109,13 @@ in each case (except the execution time of course).  Feel free to automate
 the pinning tests using a script like we learned at the beginning of chapter
 12, automated systems testing.
 
-Optimize four of the most time consuming and inefficient methods in MonkeySim.  This is what I got after optimizing:  
+Refactor *four* of the most time consuming and inefficient methods in MonkeySim.  
+
+This is what I got after optimizing:  
 ![alt text](profile.png "VisualVM snapshot after optimizations")  
-I gave argument 27 for the run.  Note that now the run takes approximately 3 seconds to run, which is a marked improvement over 37 minutes for the original code!
+I gave argument 27 for the run.  Note that now the run takes approximately 3 seconds to run, which is a marked improvement over 37 minutes for the original code!  Now the most time consuming method is generateId by a wide margin.  But there is no way to refactor that method without changing the output.  Refactoring any other method would have negligible impact on performance.  So this is when you pat yourself on the back and declare victory.
+
+* Hint: I didn't refactor generateId per se but I did modify how frequently it was getting called!
 
 ## Submission
 
