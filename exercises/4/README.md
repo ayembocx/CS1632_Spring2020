@@ -109,13 +109,17 @@ in each case (except the execution time of course).  Feel free to automate
 the pinning tests using a script like we learned at the beginning of chapter
 12, automated systems testing.
 
-Refactor *four* of the most time consuming and inefficient methods in MonkeySim.  
+Refactor *four* of the most time consuming methods in MonkeySim.  You should
+not change the behavior of any of the methods; only refactor the implementation
+so that they are more efficient.  Three of the methods will be very
+straightforward because they contain obviously redundant computation.  The
+remaining one (generateId) is less straightforward.  All the computation is
+required to generate the ID.  Hint: but do we really need to generate all those
+IDs?
 
 This is what I got after optimizing:  
 ![alt text](profile.png "VisualVM snapshot after optimizations")  
 I gave argument 27 for the run.  Note that now the run takes approximately 3 seconds to run, which is a marked improvement over 37 minutes for the original code!  Now the most time consuming method is generateId by a wide margin.  But there is no way to refactor that method without changing the output.  Refactoring any other method would have negligible impact on performance.  So this is when you pat yourself on the back and declare victory.
-
-* Hint: I didn't refactor generateId per se but I did modify how frequently it was getting called!
 
 ## Submission
 
@@ -136,3 +140,40 @@ You will do two submissions for this exercise.
 Please submit by Sunday (3/8) 11:59 PM to get timely feedback.
 
 IMPORTANT: Please keep the github private!
+
+## GradeScope Feedback
+
+It is encouraged that you submit to GradeScope early and often.  Please use the feedback you get on each submission to improve your code!
+
+The GradeScope autograder works in 2 phases:
+
+1. MonkeySim method pinning tests
+    These are JUnit pinning tests that I wrote to make sure that the important methods in MonkeySim remain pinned down (that is you didn't inadvertently modify their behaviors).  They should all pass with the original MonkeySim and it should stay that way.
+
+1. MonkeySim method performance tests
+    These are JUnit tests that I wrote to see if you made improvements on the four most time consuming methods in MonkeySim.  I set a timeout of 10 ms for each of them and if you don't complete the task within that amount of time, the test fails.  I also test the entire program using runSimulation() after setting up the monkey list to begin with monkey #5.  The simulation has a timeout of 300 ms.  You could potentially try to glean the time consuming methods from looking at the methods that I test, but please don't do that.  See if you can extract that information from the VisualVM tool.  The test output will not be so revealing on your deliverable!
+
+## Resources
+
+* VisualVM Download:
+https://visualvm.github.io/download.html
+
+* VisualVM Documentation:
+https://visualvm.github.io/documentation.html
+
+Method profiling is not the only thing that VisualVM knows how to do.  It can
+also profile overall CPU usage, heap memory usage, thread creation/termination,
+class loading/unloading, Java just-in-time compiler activity, etc.  It can also
+profile heap memory in a detailed way to show which types of objects are
+filling the memory and where their allocation sites were.  And needless to say,
+VisualVM is not the only profiling tool out there.
+
+In the unlikely case you can't find what you are looking for in existing
+profilers, you can even write your own profiler using the Java Virtual Machine
+Tool Interface (JVMTI).  JVMTI is what was used to build VisualVM.
+
+* Creating a Debugging and Profiling Agent with JVMTI
+https://www.oracle.com/technical-resources/articles/javase/jvmti.html
+
+* JVMTI Reference
+https://docs.oracle.com/javase/8/docs/platform/jvmti/jvmti.html
