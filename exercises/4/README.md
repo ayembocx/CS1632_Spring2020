@@ -155,10 +155,10 @@ The GradeScope autograder works in 2 phases:
 
 ## Resources
 
-* VisualVM Download:
+* VisualVM Download:  
 https://visualvm.github.io/download.html
 
-* VisualVM Documentation:
+* VisualVM Documentation:  
 https://visualvm.github.io/documentation.html
 
 Method profiling is not the only thing that VisualVM knows how to do.  It can
@@ -172,8 +172,8 @@ In the unlikely case you can't find what you are looking for in existing
 profilers, you can even write your own profiler using the Java Virtual Machine
 Tool Interface (JVMTI).  JVMTI is what was used to build VisualVM.
 
-* Creating a Debugging and Profiling Agent with JVMTI
+* Creating a Debugging and Profiling Agent with JVMTI  
 https://www.oracle.com/technical-resources/articles/javase/jvmti.html
 
-* JVMTI Reference
+* JVMTI Reference  
 https://docs.oracle.com/javase/8/docs/platform/jvmti/jvmti.html
