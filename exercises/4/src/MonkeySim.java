@@ -116,7 +116,7 @@ public class MonkeySim {
 			Monkey m = ml.get(j);
 			if (m.hasBanana()) {
 				int k = 0;
-				int bar = 100;
+				int bar = 10000;
 				while (k++ < (bar * bar)) {
 					if (m.getMonkeyNum() == k) {
 						bar -= Math.round(Math.sqrt(bar));
