@@ -91,7 +91,8 @@ In order to determine the "hot spots" of the application, you will need to run a
 
 Some tips for using VisualVM:
 1. Your Java app will only show up in VisualVM _during_ execution.  When the MonkeySim application shows up on the left panel, you need to quickly double click on the MonkeySim application and then click on the Profiler tab.  Then, on the Profiler window that shows up on the main pane, quickly click on the CPU button to start profiling CPU utilization.  Finally, click on the "Hot spots" button to get a list of methods sorted by running times.
-![alt text](VisualVM_profiling.png "Using VisualVM profiler")  
+![alt text](VisualVM_profiling.png "Using VisualVM profiler")
+If you right click on one of the methods in the "Hot spots" methods list, you'll get a context menu.  If you click on a the "Find in Forward Calls" item, you can see the call tree that got you to that method.
 1. If your app runs very quickly, you may not have time to perform the above actions before the app terminates!  In that case, you may want to insert a sleep() at the beginning of the main() method, during which you can perform these actions.  For example:
    ```
    try {
