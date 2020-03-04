@@ -143,7 +143,7 @@ IMPORTANT: Please keep the github private!
 
 ## GradeScope Feedback
 
-It is encouraged that you submit to GradeScope early and often.  Please use the feedback you get on each submission to improve your code!
+It is encouraged that you submit to GradeScope early and often.  Please use the feedback you get on each submission to improve your code!  All the tests have been performed after having called the @Before setUp() method which sets up the test fixture with Monkey #5 having the banana initially (just like when argument 5 has been passed on the commandline).
 
 The GradeScope autograder works in 2 phases:
 
