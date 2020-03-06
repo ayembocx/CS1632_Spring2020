@@ -56,13 +56,11 @@ Please review grading\_rubric.txt for details.
 
 ## Submission
 
-1. You will create a github repository just for deliverable 3.  Add your partner as a collaborator so both of you have access.  Make sure you keep the repository *PRIVATE* so that nobody else can access your repository.
+1. Submit your report PDf file to "Deliverable 3 Report" on GradeScope.  Please use the ReportTemplate.docx file provided in this directory to write your report.  If you don't have a .docx compatible word processor, that's perfectly fine as long as you follow the same organization.  A PDF version of the file is at ReportTemplate.pdf.  Please make sure that the intro, traceability matrix, test suite log, and defects are on seperate pages.  When you upload to GradeScope, please take care that you assign appropriate pages to each question on the rubric.  Otherwise, grading errors may occur.  
 
-1. Please use the ReportTemplate.docx file provided in this directory to write your report.  If you don't have a .docx compatible word processor, that's perfectly fine as long as you follow the same organization.  A PDF version of the file is at ReportTemplate.pdf.  Please make sure that the intro, traceability matrix, test suite log, and defects are on seperate pages.  _Please create a file named Report.pdf for your report and upload to the github repository._  
+1. Submit your saved Selenium IDE project file (the .side) to "Deliverable 3 Selenium IDE (.side) File" on GradeScope.  There is no automated grader this time.  Your file will be graded manually.
 
-1. _Please save your Selenium project to a file named deliverable3.side and also uploade to the github repository._
-
-Each pairwise group will submit the deliverable *once* to GradeScope using your github repository, by *one member* of the group.  The submitting member will press the "View or edit group" link at the top-right corner of the assignment page after submission to add his/her partner.  Make sure that your partner is there, or he/she will not get a grade.
+Each pairwise group will submit the deliverable *once* to GradeScope , by *one member* of the group.  The submitting member will press the "View or edit group" link at the top-right corner of the assignment page after submission to add his/her partner.  Make sure that your partner is there, or he/she will not get a grade.
 
 Please feel free to email me at wahn@pitt.edu or come to office hours to discuss any problems you have. 
 
@@ -72,4 +70,3 @@ These links are the same ones posted at the end of the slides:
 
 * Selenium IDE Command Reference:  
 https://www.selenium.dev/selenium-ide/docs/en/api/commands
-

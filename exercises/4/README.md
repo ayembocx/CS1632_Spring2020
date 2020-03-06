@@ -90,8 +90,9 @@ Alternatively, I've created an Eclipse project for you so you can use Eclipse to
 In order to determine the "hot spots" of the application, you will need to run a profiler such as VisualVM (download at https://visualvm.github.io/).  Using the profiler, determine a method you can modify to measurably increase the speed of the application without modifying behavior.
 
 Some tips for using VisualVM:
-1. Your Java app will only show up in VisualVM _during_ execution.  When the MonkeySim application shows up on the left panel, you need to quickly double click on the MonkeySim application and then click on the Profiler button.  Then, on the Profiler window that shows up on the main pane, quickly click on the CPU button to start profiling CPU utilization.  Finally, click on the "Hot spots" button to get a list of methods sorted by running times.
-![alt text](VisualVM_profiling.png "Using VisualVM profiler")  
+1. Your Java app will only show up in VisualVM _during_ execution.  When the MonkeySim application shows up on the left panel, you need to quickly double click on the MonkeySim application and then click on the Profiler tab.  Then, on the Profiler window that shows up on the main pane, quickly click on the CPU button to start profiling CPU utilization.  Finally, click on the "Hot spots" button to get a list of methods sorted by running times.
+![alt text](VisualVM_profiling.png "Using VisualVM profiler")
+If you right click on one of the methods in the "Hot spots" methods list, you'll get a context menu.  If you click on a the "Find in Forward Calls" item, you can see the call tree that got you to that method.
 1. If your app runs very quickly, you may not have time to perform the above actions before the app terminates!  In that case, you may want to insert a sleep() at the beginning of the main() method, during which you can perform these actions.  For example:
    ```
    try {
@@ -109,13 +110,17 @@ in each case (except the execution time of course).  Feel free to automate
 the pinning tests using a script like we learned at the beginning of chapter
 12, automated systems testing.
 
-Refactor *four* of the most time consuming and inefficient methods in MonkeySim.  
+Refactor *four* of the most time consuming methods in MonkeySim.  You should
+not change the behavior of any of the methods; only refactor the implementation
+so that they are more efficient.  Three of the methods will be very
+straightforward because they contain obviously redundant computation.  The
+remaining one (generateId) is less straightforward.  All the computation is
+required to generate the ID.  Hint: but do we really need to generate all those
+IDs?
 
 This is what I got after optimizing:  
 ![alt text](profile.png "VisualVM snapshot after optimizations")  
 I gave argument 27 for the run.  Note that now the run takes approximately 3 seconds to run, which is a marked improvement over 37 minutes for the original code!  Now the most time consuming method is generateId by a wide margin.  But there is no way to refactor that method without changing the output.  Refactoring any other method would have negligible impact on performance.  So this is when you pat yourself on the back and declare victory.
-
-* Hint: I didn't refactor generateId per se but I did modify how frequently it was getting called!
 
 ## Submission
 
@@ -136,3 +141,40 @@ You will do two submissions for this exercise.
 Please submit by Sunday (3/8) 11:59 PM to get timely feedback.
 
 IMPORTANT: Please keep the github private!
+
+## GradeScope Feedback
+
+It is encouraged that you submit to GradeScope early and often.  Please use the feedback you get on each submission to improve your code!  All the tests have been performed after having called the @Before setUp() method which sets up the test fixture with Monkey #5 having the banana initially (just like when argument 5 has been passed on the commandline).
+
+The GradeScope autograder works in 2 phases:
+
+1. MonkeySim method pinning tests
+    These are JUnit pinning tests that I wrote to make sure that the important methods in MonkeySim remain pinned down (that is you didn't inadvertently modify their behaviors).  They should all pass with the original MonkeySim and it should stay that way.
+
+1. MonkeySim method performance tests
+    These are JUnit tests that I wrote to see if you made improvements on the four most time consuming methods in MonkeySim.  I set a timeout of 10 ms for each of them and if you don't complete the task within that amount of time, the test fails.  I also test the entire program using runSimulation() after setting up the monkey list to begin with monkey #5.  The simulation has a timeout of 300 ms.  You could potentially try to glean the time consuming methods from looking at the methods that I test, but please don't do that.  See if you can extract that information from the VisualVM tool.  The test output will not be so revealing on your deliverable!
+
+## Resources
+
+* VisualVM Download:  
+https://visualvm.github.io/download.html
+
+* VisualVM Documentation:  
+https://visualvm.github.io/documentation.html
+
+Method profiling is not the only thing that VisualVM knows how to do.  It can
+also profile overall CPU usage, heap memory usage, thread creation/termination,
+class loading/unloading, Java just-in-time compiler activity, etc.  It can also
+profile heap memory in a detailed way to show which types of objects are
+filling the memory and where their allocation sites were.  And needless to say,
+VisualVM is not the only profiling tool out there.
+
+In the unlikely case you can't find what you are looking for in existing
+profilers, you can even write your own profiler using the Java Virtual Machine
+Tool Interface (JVMTI).  JVMTI is what was used to build VisualVM.
+
+* Creating a Debugging and Profiling Agent with JVMTI  
+https://www.oracle.com/technical-resources/articles/javase/jvmti.html
+
+* JVMTI Reference  
+https://docs.oracle.com/javase/8/docs/platform/jvmti/jvmti.html
