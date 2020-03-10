@@ -91,7 +91,8 @@ In order to determine the "hot spots" of the application, you will need to run a
 
 Some tips for using VisualVM:
 1. Your Java app will only show up in VisualVM _during_ execution.  When the MonkeySim application shows up on the left panel, you need to quickly double click on the MonkeySim application and then click on the Profiler tab.  Then, on the Profiler window that shows up on the main pane, quickly click on the CPU button to start profiling CPU utilization.  Finally, click on the "Hot spots" button to get a list of methods sorted by running times.
-![alt text](VisualVM_profiling.png "Using VisualVM profiler")  
+![alt text](VisualVM_profiling.png "Using VisualVM profiler")
+If you right click on one of the methods in the "Hot spots" methods list, you'll get a context menu.  If you click on a the "Find in Forward Calls" item, you can see the call tree that got you to that method.
 1. If your app runs very quickly, you may not have time to perform the above actions before the app terminates!  In that case, you may want to insert a sleep() at the beginning of the main() method, during which you can perform these actions.  For example:
    ```
    try {
@@ -143,7 +144,7 @@ IMPORTANT: Please keep the github private!
 
 ## GradeScope Feedback
 
-It is encouraged that you submit to GradeScope early and often.  Please use the feedback you get on each submission to improve your code!
+It is encouraged that you submit to GradeScope early and often.  Please use the feedback you get on each submission to improve your code!  All the tests have been performed after having called the @Before setUp() method which sets up the test fixture with Monkey #5 having the banana initially (just like when argument 5 has been passed on the commandline).
 
 The GradeScope autograder works in 2 phases:
 
@@ -155,10 +156,10 @@ The GradeScope autograder works in 2 phases:
 
 ## Resources
 
-* VisualVM Download:
+* VisualVM Download:  
 https://visualvm.github.io/download.html
 
-* VisualVM Documentation:
+* VisualVM Documentation:  
 https://visualvm.github.io/documentation.html
 
 Method profiling is not the only thing that VisualVM knows how to do.  It can
@@ -172,8 +173,8 @@ In the unlikely case you can't find what you are looking for in existing
 profilers, you can even write your own profiler using the Java Virtual Machine
 Tool Interface (JVMTI).  JVMTI is what was used to build VisualVM.
 
-* Creating a Debugging and Profiling Agent with JVMTI
+* Creating a Debugging and Profiling Agent with JVMTI  
 https://www.oracle.com/technical-resources/articles/javase/jvmti.html
 
-* JVMTI Reference
+* JVMTI Reference  
 https://docs.oracle.com/javase/8/docs/platform/jvmti/jvmti.html
