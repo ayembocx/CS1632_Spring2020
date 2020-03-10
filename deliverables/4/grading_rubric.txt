@@ -1,52 +1,44 @@
-Report content (30%):
+Report content (10%):
 
-Summary and testing concerns:                             _____ / 10
-  * How you determined the methods to refactor (-5 if not)
-  * Why you changed what you did (-5 if not)
+Screenshot and report for Feature 1:                      _____ / 5
+  * Make sure you take the screenshot after refactoring.
 
-Screenshots of VisualVM (or other profiler):              _____ / 10
-  * Screenshot before refactoring (-5 if none)
-  * Screenshot after refactoring (-5 if none)
+Screenshot and report for Feature 2:                      _____ / 5
 
-Summary of pinning tests:                                 _____ / 10
-  * If JUnit testing a method, describe how you did it (-5 if none)
-  * If manual testing a method, the reason why you had to use manual (-5 if none)
-  * If manual testing a method, you also need to have your test cases here
-
-Method choice and refactoring (40%):
+Autograder (75%):
 
 You need to find THREE methods that are intentionally implemented in
 a way to be grossly slow, that take up most of the CPU time.
 
-Found first method:                                       _____ / 10
+Performance tests:                                        _____ / 45
+  * -15 for each slow method.
 
-Found second method:                                      _____ / 10
+My pinning tests:                                         _____ / 15
+  * -5 for each failing pinning test.
 
-Found third method:                                       _____ / 10
+Your pinning tests (GameOfLifePinningTest):               _____ / 15
+  * -5 for each failing pinning test.
 
-Refactoring done properly:                                _____ / 10
-  * Refactored code must not impact functionality (-5 if not)
-  * Refactored code should improve performance (-5 if not)
+Your pinning tests are written correctly (15%):
 
-Pinning Tests (30%):
+Each of the tests are commented properly:                 _____ / 5
+  * Please follow the format we used for Deliverable 2: preconditions,
+    execution steps, and postconditions.
 
-* If manual testing a method, test cases must be well-formed with
-PRECONDITIONS, EXECUTIONS STEPS, and POSTCONDITIONS (-5 if not)
-* Test cases must be named descriptively and cover a variety of edge
-and happy cases. (-5 if not)
+External objects are mocked appropriately:                _____ / 5
+  * Each pinning test should be localized; code for external classes should
+    not be exercised as part of the test.
 
-Pinning tests for first method:                           _____ / 10
-  * 4 points for first test, 3 points for the remaining two.
-
-Pinning tests for second method:                          _____ / 10
-  * 4 points for first test, 3 points for the remaining two.
-
-Pinning tests for third method:                           _____ / 10
-  * 4 points for first test, 3 points for the remaining two.
+Behavior verification is used appropriately:              _____ / 5
+  * One of the pinning test requires behavior verification; it returns void
+    and does not change any visible state.  You need to use behavior
+    verification for this method.
 
 -----
 
-Submission issues (-10) or other adjustments:             _____
+Late submission or other adjustments:                     _____
+  * Note that the last late submission for this deliverable is April 6 due to
+    the University grading deadline.
 
 Total:                                                    _____ / 100
 

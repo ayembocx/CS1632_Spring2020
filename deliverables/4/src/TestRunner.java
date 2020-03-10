@@ -10,6 +10,7 @@ public class TestRunner {
 		boolean anyFailures = false;
 
 		// ADD ANY CLASSES YOU WISH TO TEST HERE
+		classesToTest.add(GameOfLifePinningTest.class);
 
 		// For all test classes added, loop through and use JUnit
 		// to run them.
