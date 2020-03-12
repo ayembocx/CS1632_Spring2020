@@ -26,7 +26,10 @@ public class GameOfLifePinningTest {
 	 * 
 	 * Also, you may have to use behavior verification instead of state verification
 	 * to test some methods because the state change happens within a mocked
-	 * external object.
+	 * external object. Remember that you can use behavior verification only on
+	 * mocked objects (technically, you can use Mockito.verify on real objects too
+	 * using something called a Spy, but you wouldn't need to go to that length for
+	 * this deliverable).
 	 */
 
 	/* TODO: Declare all variables required for the test fixture. */
