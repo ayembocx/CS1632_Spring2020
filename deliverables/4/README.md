@@ -120,8 +120,11 @@ class as we did for Deliverable 2 (meaning it should not exercise any code from
 external classes). You will have to use Mockito mock objects to achieve this.
 Also, you may have to use behavior verification instead of state verification
 to test some methods because the state change happens within a mocked external
-object.  You will get point deductions if you don't use mock objects and
-behavior verification appropriately.
+object.  Remember that you can use behavior verification only on mocked objects
+(technically, you can use Mockito.verify on real objects too using something
+called a Spy, but you wouldn't need to go to that length for this deliverable).
+You will get point deductions if you don't use mock objects and behavior
+verification appropriately.
 
 You will write all your pinning tests in the class GameOfLifePinningTest by
 completing the TODOs.  Please heed the comments.  Note that even though the
