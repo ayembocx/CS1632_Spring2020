@@ -1,7 +1,9 @@
 # CS 1632 - Software Quality Assurance
 Spring Semester 2020
 
-DUE: March 27, 2020 11:59 PM
+DUE: March 31, 2020 11:59 PM
+
+Revised deadline due to COVID-19.  This is to give you flexibility in scheduling.  The final project will be relased soon.  Don't put this off to the last moment!
 
 ## Deliverable 4
 
