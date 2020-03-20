@@ -1,7 +1,9 @@
 # CS 1632 - Software Quality Assurance
 Spring Semester 2020
 
-DUE: March 17, 2020 11:59 PM
+DUE: March 24, 2020 11:59 PM
+
+Revised deadline due to COVID-19.  This is to allow time for you to communicate with your partner and wrap it up.  Deliverable 4 is an individual project; get started on it as soon as possible.  Don't put it off!
 
 ## Deliverable 3
 
