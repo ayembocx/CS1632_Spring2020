@@ -443,7 +443,7 @@ It is encouraged that you submit to GradeScope early and often.  Please use the 
 
 The GradeScope autograder works in 5 phases:
 
-1. BeanCounterLogicImpl.java functionality testing:  
+1. BeanCounterLogicImpl.java functionality testing  
     The purpose of this phase is to test BeanCounterLogicImpl for defects.  I
 do this by running a set of JUnit tests against BeanCounterLogicImpl methods.
 On a failure, read the feedback to get a hint on which situation led to the
@@ -459,13 +459,13 @@ get you a point deduction.
     This phase runs the SpotBugs tool on your class files.  Each warning will
 get you a point deduction.
 
-1. BeanCounterLogicTest on BeanCounterLogicImpl:  
+1. BeanCounterLogicTest on BeanCounterLogicImpl  
     The purpose of this phase is to test BeanCounterLogicTest itself for
 defects.  Assuming BeanCounterLogicImpl is defect free (as verified in phase
 1.), any test failures in BeanCounterLogicTest while testing
 BeanCounterLogicImpl indicate a bug in BeanCounterLogicTest.
 
-1. BeanCounterLogicTest on BeanCounterLogicBuggy:
+1. BeanCounterLogicTest on BeanCounterLogicBuggy
 
     The purpose of this phase is to test BeanCounterLogicTest against the buggy
 BeanCounterLogicBuggy implementation to see if it can find the defects inside
