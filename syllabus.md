@@ -2,10 +2,15 @@
 CS1632 Software Quality Assurance
 
 Changes due to COVID-19:
+* Midterm 2 will be a take home exam submitted online assigned between 4/17 ~ 4/19 (see below).  It will be open book but individual work.  I haven't decide upon which platform to use for the exam.  One candidate is TopHat.  Suggestions welcome.
 * From now on, lectures will be pre-recorded and uploaded to courseweb using Panopto.  Currently, there are no recordings available but I will upload over the next couple of days.
 * Except for days where it says "ATTENDANCE REQUIRED", you are not required to attend during class time.  Instead, there are suggested lecture chapters for you to follow by listening to the Panopto recordings.  For these days where attendance is not required, I will field any questions you may have about the lectures or the deliverables.  Microsoft Teams will be used for the online meetings.  Simply login using your Pitt ID at office.com, select Teams, and off you go.  Within Teams, click on the calendar icon on the left to find the date and time for the meeting you want to join in.
 * When it does say "ATTENDANCE REQUIRED", it is either for an in-class exercise or a guest lecture.  Please make every effort to join in.  The in-class exercise will be done within Microsoft Teams.  The guest lectures will probably use another platform TBD.
-* Midterm 2 will be a take home exam submitted online assigned between 4/17 ~ 4/19 (see below).  It will be open book but individual work.  I haven't decide upon which platform to use for the exam.  One candidate is TopHat.  Suggestions welcome.
+* Office hours are held also on Microsoft Teams.  We have already done a couple of office hours and I realized that sometimes students need privacy.  So here are the new rules:
+  * The Team meeting area will be used sort of like a "lobby" where students can wait and chat among themselves.
+  * When it is your turn and you ask a question, please indicate if you need privacy or not (e.g. you want to discuss your source code in detail or some personal issues).  If you need privacy, I will take the question in a one-to-one chat and then return to the lobby when I'm done.  Otherwise, I will just take the question in the lobby.
+
+
 
 Although the instructor will make a best effort to have the class topic on the day listed, occasionally a change must be made (e.g., a lecture going long, or a guest lecturer unable to make it to class that day).  However, these are the topics that will be covered and the expected date that they will be taught.
 
