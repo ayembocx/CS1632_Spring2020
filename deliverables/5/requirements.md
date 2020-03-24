@@ -14,9 +14,9 @@ FUN-FAST - When the "Fast" button is pressed, the bean counter shall advance ste
 
 FUN-STOP - When the "Stop" button is pressed, the beans shall stop advancing.
 
-FUN-LOWER-HALF - When the "Lower Half" button is pressed, all beans except the lower half shall be discarded from the bottom slots.
+FUN-LOWER-HALF - When the "Lower Half" button is pressed, all beans except the lower half shall be discarded from the bottom slots.  If there is an odd number of beans, the lower half includes (N+1)/2 beans, where N is the number of beans.
 
-FUN-UPPER-HALF - When the "Upper Half" button is pressed, all beans except the upper half shall be discarded from the bottom slots.
+FUN-UPPER-HALF - When the "Upper Half" button is pressed, all beans except the upper half shall be discarded from the bottom slots.  If there is an odd number of beans, the upper half includes (N+1)/2 beans, where N is the number of beans.
 
 FUN-REPEAT - When the "Repeat" button is pressed, all beans in-flight and in the slots shall be added back to the pool of remaining beans.
 
