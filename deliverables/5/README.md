@@ -29,7 +29,7 @@ Also note there are NO LATE SUBMISSIONS due to the grading deadline.
 
 ## Overview
 
-For this final deliverable, you and your partner will develop a full-fledged
+For this final deliverable, you will develop a full-fledged
 GUI program (with the help of some skeleton code), along with various tests.
 Don't worry if you don't know GUI programming --- that part has already been
 done for you.
