@@ -242,7 +242,7 @@ $ runJPF.bat BeanCounter.win.jpf
 Or, if you are using Mac or Linux:
 
 ```
-$ runJPF.bat BeanCounter.macos.jpf
+$ runJPF.sh BeanCounter.macos.jpf
 ```
 
 What this script does is roughly the following:
@@ -278,17 +278,63 @@ terminates within more or less 5 seconds to not lengthen turnaround time.
 
 Currently, all the tests are empty save one: testReset().  That test just
 contains a println statement inserted in order to demonstrate to you all the
-combinations of input values JPF explores.  Please remove in your final
-submission.  Instead, you should put in assertions that check the invariant
-properties described in the Javadoc comment above each test method.  Note that
-these are invariant properties that hold invariably regardless of the
-combination of input values that is currently being explored.  Please use the
-JUnit assert API to insert the assertions as we have been doing so far (not the
-Java assert keyword).  Also, I recommend you always insert the failString that
-I initialized for you as the first argument of every JUnit assert call so that
-you get that as part of your failure message.  The failString contains the
-input values that are being currently tested and it will tell you which
-combination led to the failure.
+combinations of input values JPF explores.  Initially, JPF should give you an
+output that looks like this:
+
+```
+JavaPathfinder core system v8.0 (rev 471fa3b7c6a9df330160844e6c2e4ebb4bf06b6c) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+TestRunner.main()
+
+====================================================== search started: 3/28/20 3:34 AM
+Failure in (slotCount=0, beanCount=0, isLucky=false):
+
+====================================================== results
+no errors detected
+
+====================================================== statistics
+elapsed time:       00:00:00
+states:             new=2,visited=0,backtracked=2,end=1
+search:             maxDepth=2,constraints=0
+choice generators:  thread=2 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=1), data=0
+heap:               new=2624,released=1111,maxLive=1655,gcCycles=2
+instructions:       71197
+max memory:         245MB
+loaded code:        classes=273,methods=3905
+
+====================================================== search finished: 3/28/20 3:34 AM
+```
+
+After inserting the Verify calls, JPF should give you an output like this:
+```
+JavaPathfinder core system v8.0 (rev 471fa3b7c6a9df330160844e6c2e4ebb4bf06b6c) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+TestRunner.main()
+
+====================================================== search started: 3/28/20 3:39 AM
+Failure in (slotCount=1, beanCount=0, isLucky=false):
+Failure in (slotCount=1, beanCount=0, isLucky=true):
+Failure in (slotCount=1, beanCount=1, isLucky=false):
+Failure in (slotCount=1, beanCount=1, isLucky=true):
+Failure in (slotCount=1, beanCount=2, isLucky=false):
+...
+[Truncated for brevity]
+```
+
+Please remove the println in your final submission.  Instead, you should put in
+assertions that check the invariant properties described in the Javadoc comment
+above each test method.  Note that these are invariant properties that hold
+invariably regardless of the combination of input values that is currently
+being explored.  Please use the JUnit assert API to insert the assertions as we
+have been doing so far (not the Java assert keyword).  Also, I recommend you
+always insert the failString that I initialized for you as the first argument
+of every JUnit assert call so that you get that as part of your failure
+message.  The failString contains the input values that are being currently
+tested and it will tell you which combination led to the failure.
 
 What to do when you see a failure?  Now you want to zero in on the path that
 caused you the failure.  The failString tells you the combination of input
@@ -483,7 +529,50 @@ is not quite right:
 
     Note that there are a lot of beans in the first slot for some reason.
 There are other defects lurking inside that your model checker should be able
-to find.
+to find.  You can try running your model checker against BeanCounterLogicBuggy
+using the following command:
+    ```
+    $ runJPFBuggy.bat BeanCounter.win.jpf
+    ```
+    Or, if you are using Mac or Linux:
+
+    ```
+    $ runJPFBuggy.sh BeanCounter.macos.jpf
+    ```
+
+    You should get an output that looks like this:
+    ```
+JavaPathfinder core system v8.0 (rev 471fa3b7c6a9df330160844e6c2e4ebb4bf06b6c) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+TestRunner.main("buggy")
+
+====================================================== search started: 3/28/20 3:24 AM
+TESTING BUGGY IMPLEMENTATION
+
+testAdvanceStepCoordinates(BeanCounterLogicTest): Failure in (slotCount=2, beanCount=1, isLucky=true):
+testLowerHalf(BeanCounterLogicTest): Failure in (slotCount=2, beanCount=3, isLucky=false): expected:<2> but was:<1>
+testAdvanceStepBeanCount(BeanCounterLogicTest): Failure in (slotCount=2, beanCount=3, isLucky=false): expected:<3> but was:<2>
+testAdvanceStepPostCondition(BeanCounterLogicTest): Failure in (slotCount=2, beanCount=3, isLucky=false): expected:<3> but was:<2>
+testUpperHalf(BeanCounterLogicTest): Failure in (slotCount=2, beanCount=3, isLucky=false): expected:<2> but was:<1>
+testRepeat(BeanCounterLogicTest): Failure in (slotCount=4, beanCount=3, isLucky=false): expected:<3> but was:<2>
+
+====================================================== results
+no errors detected
+
+====================================================== statistics
+elapsed time:       00:00:07
+states:             new=4155,visited=3529,backtracked=7684,end=467
+search:             maxDepth=65,constraints=0
+choice generators:  thread=3 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=2), data=3834
+heap:               new=383264,released=241705,maxLive=2274,gcCycles=7659
+instructions:       15145859
+max memory:         700MB
+loaded code:        classes=339,methods=4699
+
+====================================================== search finished: 3/28/20 3:24 AM
+    ```    
 
 ## Resources
 
