@@ -541,7 +541,7 @@ using the following command:
     ```
 
     You should get an output that looks like this:
-    ```
+```
 JavaPathfinder core system v8.0 (rev 471fa3b7c6a9df330160844e6c2e4ebb4bf06b6c) - (C) 2005-2014 United States Government. All rights reserved.
 
 
@@ -572,7 +572,7 @@ max memory:         700MB
 loaded code:        classes=339,methods=4699
 
 ====================================================== search finished: 3/28/20 3:24 AM
-    ```    
+```    
 
 ## Resources
 
