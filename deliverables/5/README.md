@@ -540,7 +540,9 @@ using the following command:
     $ runJPFBuggy.sh BeanCounter.macos.jpf
     ```
 
-    You should get an output that looks like this:
+    You should get an output that looks like this (it may not look exactly the
+same depending on how you implemented your assertions but it should look
+similar):
 ```
 JavaPathfinder core system v8.0 (rev 471fa3b7c6a9df330160844e6c2e4ebb4bf06b6c) - (C) 2005-2014 United States Government. All rights reserved.
 
