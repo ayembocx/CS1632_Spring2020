@@ -143,6 +143,11 @@ class, but when they were put through the exam again, they scored just about
 average.  Did they slack off in the second exam?  No, they were just no better
 than the other students to begin with.
 
+To run your own (currently incomplete) code, you will be doing:
+```
+$ java -cp bin BeanCounterGUI 500 luck
+```
+
 ### Skill Mode
 
 In skill mode, the beans choose direction based on pure skill.  Each bean is
@@ -180,7 +185,10 @@ one when the repeat button is pressed.  All the beans in one slot have the same
 skill level so the beans naturally get sorted out as a result of the
 collection.
 
-Try out other features of the program by pressing different buttons.
+To run your own (currently incomplete) code, you will be doing:
+```
+$ java -cp bin BeanCounterGUI 500 skill
+```
 
 ### Text UI Mode
 
@@ -204,6 +212,11 @@ The last optional debug enables verbose output that prints the state of the
 bean counter at each step.  This makes debugging easier as it is able to test
 your bean counter logic in isolation from the GUI.  It also allows you to
 adjust the slot count, something which is not possible with the GUI.
+
+To run your own (currently incomplete) code, you will be doing:
+```
+$ java -cp bin BeanCounterLogicImpl 10 500 luck debug
+```
 
 ## What to do
 
