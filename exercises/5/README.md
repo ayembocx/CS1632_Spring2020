@@ -101,11 +101,11 @@ First cd into the Rand directory before executing the scripts.
 
 To run the Rand program (for Windows users):
 ```
-$ runRand.bat
+$ run.bat
 ```
 To run JPF with Rand:
 ```
-$ runJPFRand.bat
+$ runJPF.bat
 ```
 
 For Mac or Linux users, please run the corresponding .sh scripts.
