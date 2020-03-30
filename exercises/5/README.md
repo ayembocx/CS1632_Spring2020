@@ -138,7 +138,7 @@ $ run.bat
 ```
 For Mac or Linux:
 ```
-$ run.sh
+$ ./run.sh
 ```
 
 Now the current implementation contains a couple of bugs.  You will notice
@@ -151,7 +151,7 @@ $ runJPF.bat DrunkCarnivalShooter.win.jpf
 ```
 For Mac or Linux:
 ```
-$ runJPF.sh DrunkCarnivalShooter.macos.jpf
+$ ./runJPF.sh DrunkCarnivalShooter.macos.jpf
 ```
 
 The JPF tool also doesn't show any errors but that is because
