@@ -181,7 +181,7 @@ int t = Verify.getInt(0, 3);
   passed to program.  The "test" argument will put the program in test mode and
 not in play mode.  You can see "test" is already configured as the commandline
 argument in the target.args entry in
-[DrunkCarnivalShooter.win.jpf](DrunkCarnivalShooter.win.jpf)).
+[DrunkCarnivalShooter.win.jpf](DrunkCarnivalShooter/DrunkCarnivalShooter.win.jpf).
 
 The above will direct JPF to generate 4 states each where t is set to 0, 1, 2,
 or 3 respectively.  Then it will systematically explore each state.  If you
