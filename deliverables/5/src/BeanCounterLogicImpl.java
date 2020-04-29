@@ -305,7 +305,7 @@ public class BeanCounterLogicImpl implements BeanCounterLogic {
 		for(int j = pins.length -1; j > -1; j--){
 			for(int k = pins[0].length - 2; k >-1; k--){
 				if(pins[j][k] != null){
-					if(pins[j][k].changePosition(j)){
+					if(pins[j][k].getInFlightBeanXPos(j)){
 						pins[j+1][k+1] = pins[j][k];
 					}else{
 						pins[j][k+1] = pins[j][k];
