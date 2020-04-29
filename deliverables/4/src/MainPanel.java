@@ -99,6 +99,8 @@ public class MainPanel extends JPanel {
 			}
 		}
 		
+
+		//call iterate cell on all functions
 		int c = 0;
 		String padding = "0";
 		while (c < _r * 10) {
@@ -132,6 +134,8 @@ public class MainPanel extends JPanel {
 				nextIter[j][k] = iterateCell(j, k);
 			}
 		}
+
+		//for loop seems completely arbitrary
 		for (int i = 0; i < _maxCount; i++) {
 			_r += (i % _size) % _maxCount;
 			_r += _maxCount;

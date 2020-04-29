@@ -1,6 +1,7 @@
 import gov.nasa.jpf.annotation.FilterField;
 
 import java.util.Random;
+import static java.lang.Math.*;
 
 /**
  * Code by @author Wonsun Ahn
@@ -35,6 +36,11 @@ import java.util.Random;
 public class BeanImpl implements Bean {
 	// TODO: Add member methods and variables as needed
 
+
+	int slots;
+	boolean lucky;
+	Random rand;
+	int skill;
 	/**
 	 * Constructor - creates a bean in either luck mode or skill mode.
 	 * 
@@ -44,5 +50,27 @@ public class BeanImpl implements Bean {
 	 */
 	BeanImpl(int slotCount, boolean isLuck, Random rand) {
 		// TODO: Implement
+
+		slots = slotCount;
+		lucky = isLuck;
+		this.rand = rand;
+
+
+		double SKILL_AVERAGE = (double)slots*0.5;
+		double SKILL_STDEV = (double) Math.sqrt(slots* 0.5 * 0.5);
+		skill = (int)Math.round(rand.nextGaussian() * SKILL_STDEV +SKILL_AVERAGE);
+	}
+
+
+
+	public boolean changePosition(int position){
+		if(lucky){
+			return 1 == this.rand.nextInt(2);
+		}else{
+			if(position>= skill)
+				return false;
+			else
+				return true;
+		}
 	}
 }

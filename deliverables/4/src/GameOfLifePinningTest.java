@@ -6,6 +6,11 @@ import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 public class GameOfLifePinningTest {
+
+
+	MainPanel mainPan;
+	Cell[][] realCell;
+	Cell[][] mockCell;
 	/*
 	 * READ ME: You may need to write pinning tests for methods from multiple
 	 * classes, if you decide to refactor methods from multiple classes.
@@ -34,6 +39,8 @@ public class GameOfLifePinningTest {
 
 	/* TODO: Declare all variables required for the test fixture. */
 
+
+
 	@Before
 	public void setUp() {
 		/*
@@ -44,8 +51,15 @@ public class GameOfLifePinningTest {
 		 * https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#/media/File:Game_of_life_blinker.gif
 		 * Start from the vertical bar on a 5X5 matrix as shown in the GIF.
 		 */
+
+		//make 
+		mainPan = new MainPanel(5);
+		realCell = new Cell[5][5];
+		mockCell = new Cell[5][5];
 	}
 
 	/* TODO: Write the three pinning unit tests for the three optimized methods */
+
+
 
 }

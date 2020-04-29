@@ -47,6 +47,10 @@ public class BeanCounterLogicTest {
 			beans[i] = Bean.createInstance(slotCount, isLuck, new Random());
 		}
 		
+		slotCount = Verify.getInt(1,5);
+		beanCount = Verify.getInt(0,3);
+		isLuck = Verify.getBoolean();
+
 		// A failstring useful to pass to assertions to get a more descriptive error.
 		failString = "Failure in (slotCount=" + slotCount + ", beanCount=" + beanCount
 				+ ", isLucky=" + isLuck + "):";
@@ -54,6 +58,9 @@ public class BeanCounterLogicTest {
 
 	@AfterClass
 	public static void tearDown() {
+
+		logic = null;
+
 	}
 
 	/**
@@ -86,7 +93,8 @@ public class BeanCounterLogicTest {
 		 * 
 		 * PLEASE REMOVE when you are done implementing.
 		 */
-		System.out.println(failString);
+		logic.reset(beans);
+		assertTrue("Reset did not work",(beanCount-1) == logic.getRemainingBeanCount());
 	}
 
 	/**
@@ -99,7 +107,30 @@ public class BeanCounterLogicTest {
 	 */
 	@Test
 	public void testAdvanceStepCoordinates() {
+
 		// TODO: Implement
+
+		logic.reset(beans);
+		boolean coOrd = false;
+
+		while(logic.advanceStep()){
+			int location = 0; 
+			for(int i = 0; i<slotCount; i++){
+				location = logic.getInFlightBeanXPos(i);
+
+				if(location > i){
+					coOrd = false;
+					break;
+				}else if (location < -1){
+					coOrd = false;
+					break;
+				}
+
+				coOrd = true;
+			}
+
+			assertTrue("Invalid Coordinates",coOrd);
+		}
 	}
 
 	/**
@@ -113,6 +144,23 @@ public class BeanCounterLogicTest {
 	@Test
 	public void testAdvanceStepBeanCount() {
 		// TODO: Implement
+		int stationary = 0;
+		int inMotion = 0;
+		int inSlot = 0;
+
+		logic.reset(beans);
+
+		while(logic.advanceStep()){
+			continue;
+		}
+
+		stationary = logic.getRemainingBeanCount();
+		for(int i = 0; i < slotCount; i++){
+			inSlot = inSlot + logic.getSlotBeanCount(i);
+		}
+
+		inMotion = getInFlight(logic,slotCount);
+		assertTrue("Bean count was reduced",(stationary + inMotion + inSlot) == beanCount);
 	}
 
 	/**
@@ -127,7 +175,29 @@ public class BeanCounterLogicTest {
 	 */
 	@Test
 	public void testAdvanceStepPostCondition() {
-		// TODO: Implement
+
+		// TODO: Implement\
+
+		int stationary = 0;
+		int inMotion=0;
+		int inSlot = 0;
+		logic.reset(beans);
+		while(logic.advanceStep()){
+			continue;
+		}
+		
+		stationary = logic.getRemainingBeanCount();
+
+		for(int i = 0; i<slotCount;i++){
+			inSlot = inSlot + logic.getSlotBeanCount(i);
+		}
+
+		inMotion = getInFlight(logic,slotCount);
+
+		assertTrue("Still falling down",inMotion == 0);
+		assertTrue("Some stationary waiting to fall", stationary == 0);
+		assertTrue("Some beans are not in slots",beanCount == inSlot);
+
 	}
 	
 	/**
@@ -144,6 +214,20 @@ public class BeanCounterLogicTest {
 	@Test
 	public void testLowerHalf() {
 		// TODO: Implement
+
+		logic.reset(beans);
+		while(logic.advanceStep()){
+			continue;
+		}
+
+		//BeanCounterLogic oldLogic = BeanCounterLogic.createInstance(slotCount);
+		logic.lowerHalf();
+
+		if(beanCount % 2 != 0){
+			assertTrue("Lowe half was not in fact tossed",getBeansInSlot() == ((beanCount-1)/2));
+		}else{
+			assertTrue("Lower half was not in fact tossed",getBeansInSlot() == (beanCount/2));
+		}
 	}
 	
 	/**
@@ -160,6 +244,21 @@ public class BeanCounterLogicTest {
 	@Test
 	public void testUpperHalf() {
 		// TODO: Implement
+
+		logic.reset(beans);
+		while(logic.advanceStep()){
+			continue;
+		}
+
+		//BeanCounterLogic oldLogic = BeanCounterLogic.createInstance(slotCount);
+		logic.upperHalf();
+
+		if(beanCount % 2 != 0){
+			assertTrue("Lowe half was not in fact tossed",getBeansInSlot() == ((beanCount-1)/2));
+		}else{
+			assertTrue("Lower half was not in fact tossed",getBeansInSlot() == (beanCount/2));
+		}
+
 	}
 	
 	/**
@@ -175,5 +274,47 @@ public class BeanCounterLogicTest {
 	@Test
 	public void testRepeat() {
 		// TODO: Implement
+
+		logic.reset(beans);
+		while(logic.advanceStep()){
+			continue;
+		}
+		int[] slotTally = new int[slotCount];
+
+		//int x = getBeansInSlot();
+
+		for(int i =0; i <slotCount; i++){
+			slotTally[i] = logic.getSlotBeanCount(i);
+		}
+		
+		logic.reset(beans);
+		while(logic.advanceStep()){
+			continue;
+		}
+
+		if(!isLuck){
+			for(int i = 0; i < slotCount;i++){
+				assertTrue("Slot did not fall right",slotTally[i] == logic.getSlotBeanCount(i));
+			}
+		}
 	}
+
+	int getInFlight(BeanCounterLogic logic, int slotNum){
+		int tot = 0;
+		for(int i = 0; i < slotNum;i++){
+			if(logic.getInFlightBeanXPos(i) >= 0){
+				tot++;
+			}
+		}
+		return tot;
+	}
+
+	public int getBeansInSlot() {
+		// TODO: Implement
+	return beanCount;
+
 }
+
+}
+
+
